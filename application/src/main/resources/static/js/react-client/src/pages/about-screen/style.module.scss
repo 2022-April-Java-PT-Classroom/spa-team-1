@@ -1,0 +1,13 @@
+.flip-box{
+  display :flex; 
+  flex-direction:  row;
+    
+}
+.flip-box-front{
+    display: grid; 
+}
+.flip-box-back{
+display: grid;
+justify-content: center;
+
+}
