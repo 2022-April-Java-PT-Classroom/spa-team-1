@@ -1,3 +1,5 @@
+import { Route, Switch } from 'react-router-dom';
+
 import AboutScreen from '../../pages/about-screen';
 import ArtgalleryScreen from '../../pages/artgallery-screen';
 import AstronomyScreen from '../../pages/astronomy-screen';
