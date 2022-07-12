@@ -1,3 +1,5 @@
+import { Route, Switch } from 'react-router-dom';
+
 import AboutScreen from '../../pages/about-screen';
 import ArtgalleryScreen from '../../pages/artgallery-screen';
 import AstronomyScreen from '../../pages/astronomy-screen';
@@ -6,8 +8,6 @@ import HomeScreen from '../../pages/home-screen';
 import MathScreen from '../../pages/math-screen';
 import React from "react";
 import RewardScreen from '../../pages/reward-screen';
-import { Route, Switch } from "react-router-dom";
-
 
 const AppRouter = () => {
     return (
