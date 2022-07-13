@@ -1,4 +1,4 @@
-import JaclogoD from '../../assets/JAC-Game-light.png';
+import JaclogoD from '../../assets/logo/JAC-Game-dark.png';
 import { NavLink } from "react-router-dom";
 import React from "react";
 import style from './style.module.scss';

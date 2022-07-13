@@ -1,11 +1,35 @@
 * {
-    margin: 0;
-    padding: 0;
+box-sizing: border-box;
+margin-top: 0;
 }
 
-.image {
-    width: 30px;
-    cursor: pointer;
+body {
+    margin: 0;
+
+}
+
+.navList {
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    font-family: 'Press Start 2P', cursive;
+
+    background-color: #e2b808;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+    
+
+    & a {
+        color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+    border: black;
+    }
 }
 
 
@@ -34,6 +58,8 @@
 
 // .navList {
 //     display: flex;
+//     align-items: stretch;
+//     padding: 0 1rem;
 
 //     & a {
 //         align-items: center;
