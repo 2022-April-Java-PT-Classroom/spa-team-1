@@ -7,17 +7,18 @@ import style from './style.module.scss';
 
 const ContactScreen = () => {
     return (
-        <div>
+        <div className={style.ContactScreen}>
             <img src={JacLogo} alt='JAC Logo' />
-            <img src={cliffIcon} alt='Cliff Jenkins Photo CEO' />
-            <img src={alanIcon} alt='Alan Kostrick Photo VP' />
-            <img src={jordanIcon} alt='Jordan Gilpin Photo Retired' />
+            <h2>Contact Us!</h2>
+            <img src={cliffIcon} alt='Cliff Jenkins CEO' />
+            <img src={alanIcon} alt='Alan Kostrick VP' />
+            <img src={jordanIcon} alt='Jordan Gilpin Retired' />
             <h2>Contact Us</h2>
             <article>
-                <a href='https://github.com/cljenkinsjr/jackr-enterprises-site'></a>
+                {/* <a href='https://github.com/cljenkinsjr/jackr-enterprises-site'></a> */}
             </article>
         </div>
-    )
+    );
 }
 
 export default ContactScreen;
