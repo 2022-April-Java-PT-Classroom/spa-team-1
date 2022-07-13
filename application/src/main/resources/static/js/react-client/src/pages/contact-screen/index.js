@@ -1,4 +1,4 @@
-import JacLogo from '../../assets/JAC-Game.png';
+import JacLogo from '../../assets/JAC-Game-light.png';
 import React from 'react';
 import alanIcon from '../../assets/alan.png';
 import cliffIcon from '../../assets/cliff.png';
