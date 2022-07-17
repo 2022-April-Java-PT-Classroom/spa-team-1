@@ -1,6 +1,6 @@
 import ReactDom from'react-dom';
 import React, {useState} from "react";
-import style from '../..about-screen/style.module.scss'
+import style from './style.module.scss'
 import gailIcon from '../../assets/about/gail.png';
 import gianIcon from '../../assets/about/gian.png';
 import stephIcon from '../../assets/about/steph.png';
