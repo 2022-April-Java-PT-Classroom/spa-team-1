@@ -1,19 +1,10 @@
 import React from "react";
-<<<<<<< HEAD
-import gailIcon from '../../assets/about/gail.png'
-=======
 import gailIcon from '../../assets/about/gail.png';
 import gianIcon from '../../assets/about/gian.png';
->>>>>>> main
 
 // import adrianIcon from '../../assets/adrian.png'
 
 
-<<<<<<< HEAD
-// import gianIcon from '../../assets/gian.png'
-=======
-
->>>>>>> main
 
 // import jalynIcon from '../../assets/jalyn.png'
 
@@ -25,14 +16,8 @@ const AboutScreen =() => {
     return(
         <div>
             <h2 Meet the Team/>
-<<<<<<< HEAD
-                /2*3 grid 
-            {/* <img src = {gianIcon} alt = ' gian pic' /> */}
-            want to add onclick or MOUSE OVE  event to flip picture to bio info
-=======
                 {/* /2*3 grid 
             want to add onclick or MOUSE OVE  event to flip picture to bio info */}
->>>>>>> main
                 <p lorem ipsum />
             {/* <img src = {stephIcon} alt = ' steph pic' /> */}
                 <p lorem ipsum />
@@ -48,10 +33,7 @@ const AboutScreen =() => {
 
                     <div class="flip-box-front">
                       <img src = {gailIcon} alt = ' gail pic' />
-<<<<<<< HEAD
-=======
                       <img src = {gianIcon} alt = ' gian pic' />
->>>>>>> main
                     </div>
 
                     <div class="flip-box-back">
