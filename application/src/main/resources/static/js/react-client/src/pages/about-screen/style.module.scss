@@ -6,17 +6,52 @@
   width: 40%;
 }
 
-.flip-box{
-  display :flex; 
-  flex-direction:  row;
-    
-}
-.flip-box-front{
-    display: grid; 
-}
-.flip-box-back{
-display: grid;
-justify-content: center;
-
-}
+h2{
+  color:rgb(240, 200, 70);
+ font-size:100px;
+ }
+ h4{
+ font-size: 75px;
+ color: white;
+ margin-top: 100
+ px;
+ }
+ .aboutScreen{
+   display: flex;
+   justify-content: center;
+   justify-items: center;
+ }
+ .card1{
+   background-repeat: none;
+   grid-column: 1;
+  }
+ .card2{
+   background-repeat: none;
+   grid-column: 2;
+ }
+ .card3{
+   background-repeat: none;
+     grid-column: 3;
+   }
+ .card4{
+   background-repeat: none;
+     grid-column: 1;
+     grid-row: 2;
+   }
+ .card5 {
+   background-repeat: none;
+     grid-column: 2;
+     grid-row: 2;
+   }
+ .card6  {
+   background-repeat: none;
+     grid-column: 3;
+     grid-row: 2;
+   }
+ .devInfo{
+   color:white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
 
