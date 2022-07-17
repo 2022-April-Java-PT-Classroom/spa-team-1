@@ -15,6 +15,7 @@ public class Rewards {
     private Long id;
     private String name;
     private int price;
+    private String urlImg;
     private int stars;
     @ManyToMany(mappedBy = "stars")
     @JsonIgnore
@@ -24,10 +25,11 @@ public class Rewards {
 
     }
 
-    public Rewards(Long id, String name, int price, int stars, String description) {
+    public Rewards(Long id, String name, int price, String urlImg, int stars, String description) {
         this.id = id;
         this.name = name;
         this.price = price;
+        this.urlImg = urlImg;
         this.stars = stars;
         this.description = description;
     }
@@ -40,6 +42,9 @@ public class Rewards {
     }
     public int getPrice(){
         return price;
+    }
+    public String getUrlImg(){
+        return urlImg;
     }
 
     public int getStars(){

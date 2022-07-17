@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
-const RewardScreen = () => {
+import axios from 'axios';
+import style from './style.module.scss';
 
+const RewardScreen = ({RewardScreen}) => {
+    const [rewardsState, setRewardsState] = useState(rewards);
+
+    const [rewardsState, setRewardsState] = useState({
+        name: "",
+        isSelected: false
+    });
     return (
         <div>
             <h2>This is the reward screen</h2>

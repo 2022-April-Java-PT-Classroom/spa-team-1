@@ -1,9 +1,8 @@
 package org.wecancodeit.serverside.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.springframework.web.bind.annotation.*;
 import org.wecancodeit.serverside.models.Rewards;
 import org.wecancodeit.serverside.repositories.RewardsRepository;
 
@@ -25,6 +24,18 @@ public class RewardsRestController {
     @GetMapping("/api/rewards/{id}")
     public Optional<Rewards> getRewards(@PathVariable Long id) {return rewardsRepo.findById(id);
     }
+    //should I make it so people can sell their cards to increase their currency....?
+    @PostMapping("/api/rewards/{id}/add-rewards")
+    public Collection<Rewards> addRewards(@RequestBody String body) throws JSONException {
+        JSONObject newReward = new JSONObject(body);
+        String rewardsName = newReward.getString("name");
+        Optional<Rewards> rewardsToAddOpt = rewardsRepo.findByName(rewardsName);
 
-    
+        if (rewardsToAddOpt.isEmpty()) {
+            Rewards rewardsToAdd = new Rewards();
+            rewardsRepo.save(rewardsToAdd);
+        }
+        return (Collection<Rewards>) rewardsRepo.findAll();
+
+    }
 }
