@@ -17,7 +17,7 @@ public class MathController {
         return  "mathView";
     }
 
-    @RequestMapping("/math/{id}")
-    public String display 
+//    @RequestMapping("/math/{id}")
+//    public String display
 
 }

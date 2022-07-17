@@ -2,10 +2,7 @@ package org.wecancodeit.serverside.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 
 @Entity
 public class Rewards {
@@ -17,7 +14,7 @@ public class Rewards {
     private int price;
     private String urlImg;
     private int stars;
-    @ManyToMany(mappedBy = "stars")
+//    @OneToMany(mappedBy = "stars")
     @JsonIgnore
     private String description;
 
@@ -56,7 +53,5 @@ public class Rewards {
     }
 
     //Make it where if they draw a 6 star item/card/box it makes an alert that showcases the item.
-
-
-
+    
 }
