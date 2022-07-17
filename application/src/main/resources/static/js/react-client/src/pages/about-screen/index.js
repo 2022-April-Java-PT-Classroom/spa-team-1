@@ -1,11 +1,9 @@
 import React from "react";
 import gailIcon from '../../assets/about/gail.png';
 import gianIcon from '../../assets/about/gian.png';
+import style from './style.module.scss';
 
 // import adrianIcon from '../../assets/adrian.png'
-
-
-
 
 // import jalynIcon from '../../assets/jalyn.png'
 
@@ -15,7 +13,7 @@ import gianIcon from '../../assets/about/gian.png';
 
 const AboutScreen =() => {
     return(
-        <div>
+        <div className={style.Aboutscreen}>
             <h2 Meet the Team/>
                 {/* /2*3 grid 
             want to add onclick or MOUSE OVE  event to flip picture to bio info */}
@@ -33,14 +31,16 @@ const AboutScreen =() => {
                 <div class="flip-box-inner">
 
                     <div class="flip-box-front">
-                      <img src = {gailIcon} alt = ' gail pic' />
-                      <img src = {gianIcon} alt = ' gian pic' />
+                      <img className={style.aboutImg} src = {gailIcon} alt = ' gail pic' />
+                      <img className={style.aboutImg} src = {gianIcon} alt = ' gian pic' />
                     </div>
 
                     <div class="flip-box-back">
                       <article>
                         <h2>Gail</h2>
-                        <p>loremIpsum</p>
+                        <p>loremIpsum </p>
+                        
+                        
                       </article>
                     </div>
                 </div>

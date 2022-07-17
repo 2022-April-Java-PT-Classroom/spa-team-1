@@ -1,3 +1,11 @@
+
+.aboutImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
 .flip-box{
   display :flex; 
   flex-direction:  row;
@@ -11,3 +19,4 @@ display: grid;
 justify-content: center;
 
 }
+

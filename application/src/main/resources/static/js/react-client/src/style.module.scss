@@ -2,20 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap');
 
 
+
 body {
 
     font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
-// .page {
-//     // background-color: #ddd;
-//     height: 1000px;
-//     margin: 2rem auto;
-//     max-width: 1000px;
-//     padding: 20px;
+.light {
+    background-image: url(../src/assets/background/light-mode-background.png);
+    background-size: cover;
+    
+}
 
-//     & h1 {
-//         margin-bottom: 10px;
-//         text-decoration: underline;
-//     }
-// }
+.dark {
+    background-image: url(../src/assets/background/dark-mode-background.png);
+    color: white;
+    background-size: cover;
+}
