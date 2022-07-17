@@ -1,5 +1,13 @@
 import React from "react";
 
+<<<<<<< HEAD
+const MathScreen = () => {
+
+    return (
+        <div>
+            <h2>This is the math screen</h2>
+        </div>
+=======
 
 
 const MathScreen = () => {
@@ -42,6 +50,7 @@ const MathScreen = () => {
         </div>
 
         
+>>>>>>> main
         
     );
     

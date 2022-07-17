@@ -8,7 +8,11 @@ import style from './style.module.scss';
 const ContactScreen = () => {
     return (
         <div className={style.ContactScreen}>
+<<<<<<< HEAD
+            <img src={JacLogo} alt='JAC Logo' />
+=======
             <img src={JacLogoL} alt='JAC Logo' />
+>>>>>>> main
             <h2>Contact Us!</h2>
             <img src={cliffIcon} alt='Cliff Jenkins CEO' />
             <img src={alanIcon} alt='Alan Kostrick VP' />

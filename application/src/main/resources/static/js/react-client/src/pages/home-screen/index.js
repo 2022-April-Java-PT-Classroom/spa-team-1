@@ -6,6 +6,8 @@ const Homescreen = () => {
     return (
         <div className={style.Homescreen}>
             <h2>This is the home page</h2>
+<<<<<<< HEAD
+=======
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum a arcu cursus vitae congue. 
                 Metus dictum at tempor commodo ullamcorper. Dignissim convallis aenean et tortor at risus viverra. Lacus sed turpis tincidunt id. Sed nisi lacus sed viverra. 
                 Justo donec enim diam vulputate ut pharetra sit amet. Faucibus purus in massa tempor nec feugiat. Eget egestas purus viverra accumsan in nisl. 
@@ -36,6 +38,7 @@ const Homescreen = () => {
             Quam nulla porttitor massa id neque aliquam vestibulum morbi blandit. Luctus accumsan tortor posuere ac ut consequat semper viverra nam. 
             Praesent tristique magna sit amet purus gravida quis blandit. Facilisis volutpat est velit egestas dui id ornare. Ornare arcu dui vivamus arcu felis bibendum ut tristique et.
             Rutrum quisque non tellus orci ac auctor augue mauris augue. </p>
+>>>>>>> main
         </div>
 
 
