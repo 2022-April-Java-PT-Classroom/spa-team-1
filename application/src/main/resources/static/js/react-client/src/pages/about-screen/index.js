@@ -1,57 +1,69 @@
-import React from "react";
+import ReactDom from'react-dom';
+import React, {useState} from "react";
+import style from '../..about-screen/style.module.scss'
 import gailIcon from '../../assets/about/gail.png';
 import gianIcon from '../../assets/about/gian.png';
-
+import stephIcon from '../../assets/about/steph.png';
 // import adrianIcon from '../../assets/adrian.png'
-
-
-
-
 // import jalynIcon from '../../assets/jalyn.png'
-
-// import stephIcon from '../../assets/steph.png'
+//  <img src = {gailIcon} alt = ' gail pic' />
 
 // import victorIcon from '../../assets/victor.png'
 
 const AboutScreen =() => {
     return(
-        <div>
-            <h2 Meet the Team/>
-                {/* /2*3 grid 
-            want to add onclick or MOUSE OVE  event to flip picture to bio info */}
-                <p lorem ipsum />
-            {/* <img src = {stephIcon} alt = ' steph pic' /> */}
-                <p lorem ipsum />
-            {/* <img src = {jalynIcon} alt = ' jalyn pic' /> */}
-                <p lorem ipsum />
-            {/* <img src = {adrianIcon} alt = ' adrian pic' /> */}
-                <p lorem ipsum />
-            {/* <img src = {victorIcon} alt = ' victor pic' /> */}
-                <p lorem ipsum /> 
-            
-            <div class="flip-box">
-                <div class="flip-box-inner">
+        
+        <div class='container'>
+            <h1> Meet the Team</h1>
 
-                    <div class="flip-box-front">
-                      <img src = {gailIcon} alt = ' gail pic' />
-                      <img src = {gianIcon} alt = ' gian pic' />
-                    </div>
-
-                    <div class="flip-box-back">
-                      <article>
-                        <h2>Gail</h2>
-                        <p>loremIpsum</p>
-                      </article>
-                    </div>
+            <div class ="Card" id= '1'style={{ backgroundImage: `url(${stephIcon})`}} >
+                <div class="devInfo">
+                  <h2>Stephanie</h2>
+                  <p>lorem Ipsum</p>
                 </div>
             </div>
+           
+            <div class ="Card " id= '2'style={{ backgroundImage: `url(${gianIcon})`}} >
+                <div class="devInfo">
+                  <h2>Gian</h2>
+                  <p>lorem Ipsum</p>
+                </div>
+            </div>
+       
+        <div class ="Card" id='3'style={{ backgroundImage: `url(${gailIcon})`}} >
+            <div class="devInfo">
+              <h2>Gail</h2>
+              <p>lorem Ipsum</p>
+            </div>
+        </div>
+        <div class ="Card" id='4'style={{ backgroundImage: `url(${gailIcon})`}} >
+            <div class="devInfo">
+              <h2>Victor</h2>
+              <p>lorem Ipsum</p>
+            </div>
+        </div>
+        <div class ="Card" id='5'style={{ backgroundImage: `url(${gailIcon})`}} >
+            <div class="devInfo">
+              <h2>Adrian</h2>
+              <p>lorem Ipsum</p>
+            </div>
+        </div>
+        <div class ="Card" id='6'style={{ backgroundImage: `url(${gailIcon})`}} >
+            <div class="devInfo">
+              <h2>Jalyn</h2>
+              <p>lorem Ipsum</p>
+            </div>
+        </div>
+    </div>
+            
+    );
+                     
+           
            
 
 
 
 
-        </div>
-    );
 
 
 
