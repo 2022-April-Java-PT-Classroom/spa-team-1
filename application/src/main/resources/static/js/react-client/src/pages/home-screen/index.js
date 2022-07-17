@@ -1,27 +1,5 @@
-import Footer from '../../components/footer';
-import Header from '../../components/header';
 import React from 'react';
 import style from './style.module.scss';
-
-// buildPage();
-
-// function buildPage(){
-//     Header();
-//     Footer();
-// }
-
-// function header() {
-//     const headerElem = document.querySelector('.header');
-//     headerElem.innerHTML = Header();
-// }
-
-// function footer() {
-//     const footerElem = document.querySelector('.footer');
-//     footerElem.innerHTML = Footer();
-// }
-
-
-
 
 const Homescreen = () => {
     
