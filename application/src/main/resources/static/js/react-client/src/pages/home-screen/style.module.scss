@@ -1,5 +1,19 @@
+<<<<<<< HEAD
 .image {
     height: auto;
     max-width: 500px;
     
 }
+=======
+body {
+    background-image: url(../../assets/background/light-mode-background.png);
+    background-size: cover;
+
+    & p {
+        text-align: center;
+        max-width: 50%;
+    }
+}
+
+
+>>>>>>> main
