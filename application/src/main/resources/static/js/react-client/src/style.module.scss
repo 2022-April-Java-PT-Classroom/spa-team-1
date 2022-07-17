@@ -8,25 +8,27 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-#light {
-    background-color: #00e7ff;
+.light {
+    background-image: url(../src/assets/background/light-mode-background.png);
+    // background-color: #00e7ff;
 }
 
-#dark {
-    background-color: #101010;
+.dark {
+    background-image: url(../src/assets/background/dark-mode-background.png);
+    // background-color: #101010;
 }
 
-// #light .body
-.App #light {
-    // background: url(../../assets/background/light-mode-background.png);
-    background-color: #00e7ff;
-}
+// // #light .body
+// .App #light {
+//     // background: url(../../assets/background/light-mode-background.png);
+//     background-color: #00e7ff;
+// }
 
-// #dark .body 
-.App #dark {
-    // background: url(../../assets/background/dark-mode-background.png);
-    background-color: #101010;
-}
+// // #dark .body 
+// .App #dark {
+//     // background: url(../../assets/background/dark-mode-background.png);
+//     background-color: #101010;
+// }
 
 // .page {
 //     // background-color: #ddd;

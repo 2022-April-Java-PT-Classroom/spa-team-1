@@ -18,7 +18,7 @@ function App() {
   
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="App" id={theme} >
+      <div className={theme==='dark' ? style.dark : style.light} >
         <BrowserRouter>
           <Header />
           <div className={style.App}>
