@@ -4,8 +4,10 @@ import ReactDom from'react-dom';
 import adrianIcon from '../../assets/about/adrian.png'
 import gailIcon from '../../assets/about/gail.png';
 import gianIcon from '../../assets/about/gian.png';
+
 import stephIcon from '../../assets/about/steph.png';
 import style from './style.module.scss';
+
 
 // import jalynIcon from '../../assets/jalyn.png'
 //  <img src = {gailIcon} alt = ' gail pic' />
@@ -13,11 +15,13 @@ import style from './style.module.scss';
 
 const AboutScreen =() => {
     return(
+
         <div class='container'>
             <h2> Meet the Team</h2>
             <div class ="Card1" id= '1'style={{ backgroundImage: `url(${stephIcon})`}}  >
                   <h4>Stephanie</h4>
                   <p>lorem Ipsum</p>
+
             </div>
             <div class ="Card2 " id= '2'style={{ backgroundImage: `url(${gianIcon})`}} >
                   <h4>Gian</h4>
