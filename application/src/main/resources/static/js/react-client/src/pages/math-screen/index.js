@@ -2,8 +2,6 @@ import React from "react";
 
 const MathScreen = () => {
 
-
-
     return (
 
 
@@ -35,14 +33,8 @@ const MathScreen = () => {
                 <p>6/3=2</p>
             </div>
 
-
-
         </div>
 
-        
-        
     );
-    
 }
-
 export default MathScreen;
