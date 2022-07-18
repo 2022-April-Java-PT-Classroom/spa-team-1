@@ -4,43 +4,48 @@ import ReactDom from'react-dom';
 import adrianIcon from '../../assets/about/adrian.png'
 import gailIcon from '../../assets/about/gail.png';
 import gianIcon from '../../assets/about/gian.png';
-
 import stephIcon from '../../assets/about/steph.png';
 import style from './style.module.scss';
-
+import victorIcon from '../../assets/about/victor.png'
 
 // import jalynIcon from '../../assets/jalyn.png'
 //  <img src = {gailIcon} alt = ' gail pic' />
-// import victorIcon from '../../assets/victor.png'
+
 
 const AboutScreen =() => {
     return(
 
         <div class='container'>
-            <h2> Meet the Team</h2>
-            <div class ="Card1" id= '1'style={{ backgroundImage: `url(${stephIcon})`}}  >
-                  <h4>Stephanie</h4>
+            <h4 className="aboutHF"> Meet the Team</h4>
+            <div className="Card1" id= '1'>
+                  <h2 className="aboutH2">Stephanie</h2>
+                  <img src={stephIcon} alt="Stephanie Pic" /> 
                   <p>lorem Ipsum</p>
 
             </div>
-            <div class ="Card2 " id= '2'style={{ backgroundImage: `url(${gianIcon})`}} >
-                  <h4>Gian</h4>
-                  <p>lorem Ipsum</p>
+            <div className="Card2 " id= '2'>
+                  <h2 className="aboutH2">Gian</h2>
+                  <img src={gianIcon} alt="Gian Pic" />
+                        <p>lorem Ipsum</p>
             </div>
-        <div class ="Card3" id='3'style={{ backgroundImage: `url(${gailIcon})`}} >
-              <h4>Gail</h4>
+        <div className="Card3" id='3'>
+              <h2 className="aboutH2">Gail</h2>
+              <img src={gailIcon} alt="Gail Pic" />
               <p>lorem Ipsum</p>
         </div>
-        <div class ="Card4" id='4'style={{ backgroundImage: `url(${gailIcon})`}} >
-              <h5>Victor</h5>
+        <div className="Card4" id='4'>
+              <h2 className="aboutH2">Victor</h2>
+              <img src={victorIcon} alt="Vic pic" />
               <p>lorem Ipsum</p>
         </div>
-        <div class ="Card5" id='5'style={{ backgroundImage: `url(${adrianIcon})`}} >
-              <h2>Adrian</h2>
+        <div className="Card5" id='5'>
+              <h2 className="aboutH2">Adrian</h2>
+              <img src={adrianIcon} alt="Adrian Pic" />
               <p>lorem Ipsum</p>
         </div>
-        <div class ="Card6" id='6'style={{ backgroundImage: `url(${gailIcon})`}} >
-              <h2>Jalyn</h2>
+        <div className="Card6" id='6'>
+              <h2 className="aboutH2">Jalyn</h2>
+              <img src={gailIcon} alt="Jalyn Pic" />
               <p>lorem Ipsum</p>
         </div>
     </div>
