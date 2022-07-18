@@ -9,20 +9,21 @@ public class Rewards {
 
     @Id
     @GeneratedValue
-    private Long id;
-    private String name;
-    private int price;
-    private String urlImg;
-    private int stars;
+    public Long id;
+    public boolean isSelected;
+    public String name;
+    public int price;
+    public String urlImg;
+    public int stars;
 //    @OneToMany(mappedBy = "stars")
     @JsonIgnore
-    private String description;
+    public String description;
 
     public Rewards(){
 
     }
 
-    public Rewards(Long id, String name, int price, String urlImg, int stars, String description) {
+    public Rewards(Long id, boolean isSelected, String name, int price, String urlImg, int stars, String description) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -33,6 +34,9 @@ public class Rewards {
 
     public Long getId() {
         return id;
+    }
+    public boolean setSelected(boolean rewardIsSelected){
+        return isSelected;
     }
     public String getName(){
         return name;
