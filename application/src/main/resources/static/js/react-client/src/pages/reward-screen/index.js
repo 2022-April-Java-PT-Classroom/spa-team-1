@@ -30,6 +30,8 @@ const RewardScreen = () => {
     return (
         loading ? <h2>Loading...</h2> :
         <div>
+            <section className={style.rewardsSection}>
+            <div className={style.rewardsText}>
             <h3>These are the Rewards</h3>
             {rewards.map(rewards => (
                 <p key={rewards.id}>
@@ -40,6 +42,8 @@ const RewardScreen = () => {
                     <h3 class="rewards_description">Description: {rewards.description}</h3>
                     </p>
             ))}
+        </div>
+        </section>
         </div>
     );
     
