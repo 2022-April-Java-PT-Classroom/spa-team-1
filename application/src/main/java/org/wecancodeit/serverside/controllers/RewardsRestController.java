@@ -16,16 +16,16 @@ public class RewardsRestController {
     @Resource
     private RewardsRepository rewardsRepo;
 
-    @GetMapping("/api/rewards")
+    @GetMapping("/rewards")
     public Collection<Rewards> getRewards(){
         return (Collection<Rewards>) rewardsRepo.findAll();
     }
 
-    @GetMapping("/api/rewards/{id}")
-    public Optional<Rewards> getRewards(@PathVariable Long id) {return rewardsRepo.findById(id);
-    }
+//    @GetMapping("/api/reward/{id}")
+//    public Optional<Rewards> getRewards(@PathVariable Long id) {return rewardsRepo.findById(id);
+//    }
     //should I make it so people can sell their cards to increase their currency....?
-    @PostMapping("/api/rewards/{id}/add-rewards")
+    @PostMapping("/api/rewards/add-rewards")
     public Collection<Rewards> addRewards(@RequestBody String body) throws JSONException {
         JSONObject newReward = new JSONObject(body);
         String rewardsName = newReward.getString("name");
@@ -37,5 +37,26 @@ public class RewardsRestController {
         }
         return (Collection<Rewards>) rewardsRepo.findAll();
 
+    }
+    //doesn't request body function the same as a RestController?
+    @PutMapping ("/api/rewards/{id}/select-item")
+    public Collection<Rewards> selectRewards(@PathVariable Long id, @RequestBody String body) throws JSONException {
+        JSONObject newRewards = new JSONObject(body);
+        boolean rewardIsSelected = newRewards.getBoolean("isSelected");
+        Optional<Rewards> rewardsToSelectOpt = rewardsRepo.findById(id);
+
+        if (rewardsToSelectOpt.isPresent()) {
+            rewardsToSelectOpt.get().setSelected(rewardIsSelected);
+            rewardsRepo.save(rewardsToSelectOpt.get());
+        }
+        return (Collection<Rewards>) rewardsRepo.findAll();
+    }
+    @DeleteMapping("/api/rewards/{id}/delete-item")
+    public Collection<Rewards> deleteRewards(@PathVariable Long id) throws JSONException {
+        Optional<Rewards> rewardsToRemoveOpt = rewardsRepo.findById(id);
+        if(rewardsToRemoveOpt.isPresent()){
+            rewardsRepo.delete(rewardsToRemoveOpt.get());
+        }
+        return (Collection<Rewards>) rewardsRepo.findAll();
     }
 }
