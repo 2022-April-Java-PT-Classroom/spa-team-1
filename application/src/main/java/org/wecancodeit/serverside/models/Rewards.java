@@ -9,15 +9,15 @@ public class Rewards {
 
     @Id
     @GeneratedValue
-    private Long id;
-    private boolean isSelected;
-    private String name;
-    private int price;
-    private String urlImg;
-    private int stars;
+    public Long id;
+    public boolean isSelected;
+    public String name;
+    public int price;
+    public String urlImg;
+    public int stars;
 //    @OneToMany(mappedBy = "stars")
     @JsonIgnore
-    private String description;
+    public String description;
 
     public Rewards(){
 

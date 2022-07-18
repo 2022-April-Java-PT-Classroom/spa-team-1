@@ -15,7 +15,7 @@ public class populator implements CommandLineRunner {
     private MathRepository mathRepo;
 
     @Resource
-    private RewardsRepository rewardsRepo;
+    public RewardsRepository rewardsRepo;
 
 
     @Override

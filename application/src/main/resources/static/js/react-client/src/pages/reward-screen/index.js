@@ -11,8 +11,8 @@ const RewardScreen = () => {
 
     useEffect(() => {
         const fetchRewardsData = async () => {
-            const result = await Axios(`http://localhost:8080/api/rewards`);
-            setRewards(result.data);
+            const result = await Axios('http://localhost:8080/api/rewards');
+            console.log(result.data);
         }
 
         if (rewards) {

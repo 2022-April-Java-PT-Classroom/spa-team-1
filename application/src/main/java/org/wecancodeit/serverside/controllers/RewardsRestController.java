@@ -10,13 +10,15 @@ import javax.annotation.Resource;
 import java.util.Collection;
 import java.util.Optional;
 
+@CrossOrigin("*")
+@RequestMapping
 @RestController
 public class RewardsRestController {
 
     @Resource
     private RewardsRepository rewardsRepo;
 
-    @GetMapping("/rewards")
+    @GetMapping("/api/rewards")
     public Collection<Rewards> getRewards(){
         return (Collection<Rewards>) rewardsRepo.findAll();
     }
