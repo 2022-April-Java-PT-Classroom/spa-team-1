@@ -1,61 +1,51 @@
-import React from "react";
+import React, {useState} from "react";
+
+import ReactDom from'react-dom';
+import adrianIcon from '../../assets/about/adrian.png'
 import gailIcon from '../../assets/about/gail.png';
 import gianIcon from '../../assets/about/gian.png';
 
-// import adrianIcon from '../../assets/adrian.png'
-
-
+import stephIcon from '../../assets/about/steph.png';
+import style from './style.module.scss';
 
 
 // import jalynIcon from '../../assets/jalyn.png'
-
-// import stephIcon from '../../assets/steph.png'
-
+//  <img src = {gailIcon} alt = ' gail pic' />
 // import victorIcon from '../../assets/victor.png'
 
 const AboutScreen =() => {
     return(
-        <div>
-            <h2 Meet the Team/>
-                {/* /2*3 grid 
-            want to add onclick or MOUSE OVE  event to flip picture to bio info */}
-                <p lorem ipsum />
-            {/* <img src = {stephIcon} alt = ' steph pic' /> */}
-                <p lorem ipsum />
-            {/* <img src = {jalynIcon} alt = ' jalyn pic' /> */}
-                <p lorem ipsum />
-            {/* <img src = {adrianIcon} alt = ' adrian pic' /> */}
-                <p lorem ipsum />
-            {/* <img src = {victorIcon} alt = ' victor pic' /> */}
-                <p lorem ipsum /> 
-            
-            <div class="flip-box">
-                <div class="flip-box-inner">
 
-                    <div class="flip-box-front">
-                      <img src = {gailIcon} alt = ' gail pic' />
-                      <img src = {gianIcon} alt = ' gian pic' />
-                    </div>
+        <div class='container'>
+            <h2> Meet the Team</h2>
+            <div class ="Card1" id= '1'style={{ backgroundImage: `url(${stephIcon})`}}  >
+                  <h4>Stephanie</h4>
+                  <p>lorem Ipsum</p>
 
-                    <div class="flip-box-back">
-                      <article>
-                        <h2>Gail</h2>
-                        <p>loremIpsum</p>
-                      </article>
-                    </div>
-                </div>
             </div>
-           
-
-
-
-
+            <div class ="Card2 " id= '2'style={{ backgroundImage: `url(${gianIcon})`}} >
+                  <h4>Gian</h4>
+                  <p>lorem Ipsum</p>
+            </div>
+        <div class ="Card3" id='3'style={{ backgroundImage: `url(${gailIcon})`}} >
+              <h4>Gail</h4>
+              <p>lorem Ipsum</p>
         </div>
+        <div class ="Card4" id='4'style={{ backgroundImage: `url(${gailIcon})`}} >
+              <h5>Victor</h5>
+              <p>lorem Ipsum</p>
+        </div>
+        <div class ="Card5" id='5'style={{ backgroundImage: `url(${adrianIcon})`}} >
+              <h2>Adrian</h2>
+              <p>lorem Ipsum</p>
+        </div>
+        <div class ="Card6" id='6'style={{ backgroundImage: `url(${gailIcon})`}} >
+              <h2>Jalyn</h2>
+              <p>lorem Ipsum</p>
+        </div>
+    </div>
     );
-
-
-
 }
-export  default AboutScreen;
+export default AboutScreen;
 
  
