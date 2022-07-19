@@ -53,3 +53,14 @@
    justify-content: center;
    align-items: center;
  }
+
+.light {
+  background-image: url(../../assets/background/pages-light-background.png) !important;
+  background-size: cover;
+ }
+
+ .dark {
+  background-image: url(../../assets/background/pages-dark-background.png) !important;
+  color: white;
+  background-size: cover;
+ }
