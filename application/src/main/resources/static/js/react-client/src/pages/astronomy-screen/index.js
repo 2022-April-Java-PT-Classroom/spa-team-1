@@ -8,7 +8,7 @@ const AstronomyScreen = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
-      const result = await Axios("https://images-api.nasa.gov/search?q=galaxy");
+      const result = await Axios('https://images-api.nasa.gov/search?q=galaxy');
       console.log(result.data);
       setImages(result.data.collection.items);
     };
