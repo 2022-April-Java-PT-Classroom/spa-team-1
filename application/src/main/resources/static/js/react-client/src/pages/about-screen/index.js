@@ -17,12 +17,14 @@ const AboutScreen =() => {
 
         <div class='container'>
             <h4 className="aboutHF"> Meet the Team</h4>
-            <div className="Card1" id= '1'>
-                  <h2 className="aboutH2">Stephanie</h2>
-                  <img src={stephIcon} alt="Stephanie Pic" /> 
-                  <p>lorem Ipsum</p>
-
+            <div className= 'cards' >
+             <img src={stephIcon} alt="Stephanie Pic" /> 
+                  <article className="Card1" id= '1'>
+                        <h2 className="aboutH2">Stephanie</h2>
+                        <p>lorem Ipsum</p>
+                  </article>
             </div>
+           
             <div className="Card2 " id= '2'>
                   <h2 className="aboutH2">Gian</h2>
                   <img src={gianIcon} alt="Gian Pic" />
