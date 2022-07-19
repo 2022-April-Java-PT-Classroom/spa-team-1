@@ -9,8 +9,9 @@ const FishPage = () => {
 
     useEffect(() => {
         const fetchFishesData = async () => {
-            const result = await Axios('https://www.fishwatch.gov/api/species/red-snapper');
-            setFishes(result.data);
+            const result = await Axios('https://www.fishwatch.gov/api/species');
+            setFishes(result.data[0]);
+            console.log(result.data);
         }
         
         if(fishes){
@@ -28,7 +29,7 @@ const FishPage = () => {
 return (
     loading ? <h3>loading fish...</h3> :
     <div>
-        <h3>{ fishes.SpeciesName }</h3>
+        <h3>{fishes['Species Name']}</h3>
     </div>
     );
 };
