@@ -11,7 +11,7 @@ const Header = () => {
                 <NavLink to={'/'}>Home</NavLink>
                 <NavLink to={'/about'}>About</NavLink>
                 <NavLink to={'/contact'}>Contact</NavLink>
-                <NavLink to={'/reward'}>Rewards</NavLink>
+                <NavLink to={'/rewards'}>Rewards</NavLink>
                 {/* <NavLink to={'/artgallery-screen'}>Art Gallery</NavLink> */}
                 <img className={style.image} src={JaclogoD} alt='JAC Logo' />
             </ul>

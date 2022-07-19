@@ -22,7 +22,7 @@ const RewardScreen = () => {
     useEffect(() => {
         const fetchRewardsData = async () => {
             const result = await Axios('http://localhost:8080/api/rewards');
-            console.log(result.data);
+            setRewards(result.data);
         }
 
         if (rewards) {
@@ -36,8 +36,22 @@ const RewardScreen = () => {
         return () => clearTimeout(timer);
         //eslint-disable-next-line
     }, [rewards]);
+    
+    // useEffect(() => {
+    //     const fetchRewardsData = async () => {
+    //         const result = await Axios('http://localhost:8080/api/rewards');
+    //         setRewards(result.data);
+    //     }
+    //     if (rewards) {
+    //         setLoading(false);
+    //     }
+    //     const timer = setTimeout(() =>{
+    //         !rewards && fetchRewardsData();
+    //     }
+    // }
 
     return (
+        loading ? <h2>Loading...</h2> :
 // light/dark mode
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="Contact" id={theme} >   
@@ -48,7 +62,6 @@ const RewardScreen = () => {
         </div>
 {/* light/dark mode */}
 
-        loading ? <h2>Loading...</h2> :
         <div>
             <section className={style.rewardsSection}>
             <div className={style.rewardsText}>
@@ -66,9 +79,9 @@ const RewardScreen = () => {
         </section>
         </div>
 
-    </div>
-    </div>   
-    </ThemeContext.Provider>      
+    // </div>
+    // </div>   
+    // </ThemeContext.Provider>      
     );
     
 }
