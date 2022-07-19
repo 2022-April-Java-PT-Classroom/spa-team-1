@@ -1,8 +1,8 @@
 import JacLogoL from '../../assets/logo/JAC-Game-light.png';
 import React from 'react';
-import alanIcon from '../../assets/contact/alan.png';
-import cliffIcon from '../../assets/contact/cliff.png';
-import jordanIcon from '../../assets/contact/jordan.png';
+import alanIcon from '../../assets/contact/alan1.png';
+import cliffIcon from '../../assets/contact/cliff1.png';
+import jordanIcon from '../../assets/contact/jordan1.png';
 import style from './style.module.scss';
 import {FaStar} from 'react-icons/fa';
 const colors ={
@@ -24,21 +24,36 @@ const ContactScreen = () => {
    const handleMouseLeave=()=>{
     setHoverValue(undefined)
    }
+
+
+
+
+
+
         return(
-          <div className="wrapper"style={styles.container}>
-                <h2>JAC Enterprises</h2>
-                        <div style= {style.founders}>
-                            <img src={cliffIcon} alt='Cliff Jenkins CEO'/>
-                            <img src={alanIcon} alt='Alan Kostrick VP'/>
-                            <img src={jordanIcon} alt='Jordan Gilpin Retired' />
-                            <h2>Contact Us</h2>
-                            <article>
+          <div className="fWrapper"style={styles.container}alt='container'>
+                         <h2>JAC Enterprises</h2>
+                        <div className= 'founders'style= {styles.founders} alt='founders'>
+                            <div style={styles.card} alt='cliff'>
+                                <img src={cliffIcon} alt='Cliff Jenkins CEO'/>
+                                <a>Cliff Jenkins CEO</a>
+                                </div>
+                                <div style={styles.card} alt='alan'>                                <img src={alanIcon} alt='Alan Kostrick VP'/>
+                                <a>Alan Kostrick Vice President</a>
+                            </div>
+                            <div style={styles.card} alt='jordan'>                                <img src={jordanIcon} alt='Jordan Gilpin Retired' />
+                                <a>Jordan Gilpin You are Missed</a>
+                            </div>
+                        </div>
+                            {/* <h2>Contact Us</h2> */}
+                            {/* <article>
                 
                                 <a href='https://github.com/cljenkinsjr/jackr-enterprises-site'></a>
-                            </article>
-                        </div>
+                            </article> */}
+                        
             <h1>Reviews</h1>
-            <div style={styles.stars}>
+            <div className='Rwrapper' style={styles.Rwrapper} alt='Rwrapper'>
+            <div className='stars'style={styles.stars} alt='stars'>
                 {stars.map((_, index)=>{
                     return(
                         <FaStar
@@ -55,11 +70,12 @@ const ContactScreen = () => {
                     />
                     )
                 })}
-            </div>
+                </div>
                 <textarea
                 placeholder='What do you think?'
-                style={styles.textarea}
+                style={styles.textarea} alt='textarea'
                 />
+            </div>
           </div>
         )
     
@@ -70,17 +86,41 @@ const ContactScreen = () => {
 };
 const styles={
     container:{
-      display: 'flex',
+        display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
+                 },
+      founders:{
+        display: 'flex', 
+        flex:'1'
+      },
+      
 
+      card:{
+        diplay:'flex',
+        flexDirection:'Column'
+    },
+    Rwrapper:{
+       display:'flex', 
+        flexDirection:'Column',
+    },
+      stars:{
+        display:'flex',
+        alignItem:'flex-Start',
+        alignContent:'center'
+
+      },
       textarea:{
+        display:'flex',
+        alignContent:'center',
         border: '1px solid#a9a9a9',
         borderRadius:'5',
-        wdith: 300,
+        wdith: '300',
         padding:'10'
+
       }
-    }
+
+    
 }
 
 export default ContactScreen;
