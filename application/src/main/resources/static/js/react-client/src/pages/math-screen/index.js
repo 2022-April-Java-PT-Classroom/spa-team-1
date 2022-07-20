@@ -1,7 +1,8 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 import ReactSwitch from "react-switch";
 import style from './style.module.scss';
+import Axios from 'axios';
 
 export const ThemeContext = createContext(null);
 
@@ -11,6 +12,35 @@ const MathScreen = () => {
     const toggleTheme = () => {
       setTheme((curr) => (curr === "light" ? "dark" : "light"));
     };
+
+    const [math, setMath]= useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect (()=>{
+
+        const fetchMathData = async () => {
+            const result = await Axios('http://localhost:8080/math');
+            setMath(result.data);
+        }
+
+        if(math) {
+            setLoading(false);
+        }
+
+        const timer = setTimeout(() => {
+            !math && fetchMathData();
+        }, 1000);
+
+        return ()=> clearTimeout(timer);
+
+    
+
+
+    }, [math]);
+
+        console.log(math);
+
+
     
     return (
 
@@ -24,8 +54,23 @@ const MathScreen = () => {
 
         <div>
             <h2>This is the math screen</h2>
+            {loading ? <h3>Loading...</h3> : math.map(math => (
+                <a href={'math.${math.id}' }><p>{math.name}</p></a>
+            ))}
 
-            <div class="addSect">
+
+
+        </div>
+
+    </div>
+    </div>   
+    </ThemeContext.Provider>  
+
+    );
+}
+export default MathScreen;
+
+{/* <div class="addSect">
                 <h3>This is the addition section</h3>
                 <p>This is where the page will hook up to the API to show simple addition problems</p>
                 <p>1+1=2</p>
@@ -48,14 +93,4 @@ const MathScreen = () => {
             <div class="divSect">
                 <h3>This is the division section</h3>
                 <p>6/3=2</p>
-            </div>
-
-        </div>
-
-    </div>
-    </div>   
-    </ThemeContext.Provider>  
-
-    );
-}
-export default MathScreen;
+            </div> */}
