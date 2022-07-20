@@ -113,39 +113,31 @@ const ArtgalleryScreen = () => {
   
 
     return (
-    //     loading ? <h3>Creating art...</h3> :
-    //      // light/dark mode
-    //     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-    //   <div className="Artgallery" id={theme} >   
-    //   <div className={theme=== 'dark' ? style.dark : style.light}>
-    //   <div className="switch">
-    //       {/* <label> {theme === "light" ? "Light Mode" : "Dark Mode"}</label> */}
-    //     <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
-    //     </div>
-    // {/* light/dark mode */}
-  
-         <div className={style.artContainer}>
-             {/* <h1>The Metropolitan Museum of Art</h1>
+        // loading ? <h3>Creating art...</h3> :
+         // light/dark mode
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div className="Artgallery" id={theme} >   
+      <div className={theme=== 'dark' ? style.dark : style.light}>
+      <div className="switch">
+          {/* <label> {theme === "light" ? "Light Mode" : "Dark Mode"}</label> */}
+        <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
+        </div>
+    {/* light/dark mode */}
+         <div>
+            <section className ={style.artContainer}>
+              {/* <h1>The Metropolitan Museum of Art</h1>
           <h2>{art.title}</h2>
           <h5>{art.accessionYear}</h5>
           <h3>{art.artistDisplayName}</h3>
-          <img src={art.primaryImage} />   */}
+          <img src={art.primaryImage} />    */}
           
-    //       {/* <h2>{artTwo.title}</h2>
-    //       <h5>{artTwo.accessionYear}</h5>
-    //       <h3>{artTwo.artistDisplayName}</h3>
-    //       <img src={artTwo.primaryImage} />
-
-    //       <h2>{artThree.title}</h2>
-    //       <h5>{artThree.accessionYear}</h5>
-    //       <h3>{artThree.artistDisplayName}</h3>
-    //       <img src={artThree.primaryImage} /> */}
-    //     {/* </div> */}
-        
-    //     {/* light/dark mode */}
-    {/* //     </div> */}
-    //     </div>
-    //     </ThemeContext.Provider>
+        {/* light/dark mode */}
+        </section>
+        <button onClick="window.location.href=window.location.href">See More!</button>
+        </div>
+        </div>
+        </div>
+         </ThemeContext.Provider>
     );
 
 
