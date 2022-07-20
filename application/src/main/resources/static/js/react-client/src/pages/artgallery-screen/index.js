@@ -15,97 +15,140 @@ const ArtgalleryScreen = () => {
     };
      // light/dark mode
 
-    
     const [art, setArt] = useState(null);
-    const [artTwo, setArtTwo] = useState(null);
-    const [artThree, setArtThree] = useState(null);
+    // const [artTwo, setArtTwo] = useState(null);
+    // const [artThree, setArtThree] = useState(null);
     const [loading, setLoading] = useState(true);
     
+    const randomID = Math.floor((Math.random() * 50) +1);
+
     useEffect(() => {
-        const fetchArtData = async () => {
-            const result = await Axios(`https://collectionapi.metmuseum.org/public/collection/v1/objects/208058`);
-            console.log(result.data);
-            setArt(result.data);
+
+        const fetchArtData = async() => {
+            const randomArt = await Axios(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomID}`);
+            console.log(randomArt.data);
+            setArt(randomArt.data);
         };
+
+        if (art) {
+            setArt(false);
         
-        if(art) {
-            setLoading(false);
         }
         const timer = setTimeout(() => {
             !art && fetchArtData();
-        }, 500);
-        
+        }, 1000);
         return () => clearTimeout(timer);
-        }, [art]);
-        
-        useEffect(() => {
-            const fetchArtTwoData = async () => {
-                const result = await Axios(`https://collectionapi.metmuseum.org/public/collection/v1/objects/432`);
-                console.log(result.data);
-                setArtTwo(result.data);
-            };
-            
-            if(artTwo) {
-                setLoading(false);
-            }
-            const timer = setTimeout(() => {
-                !artTwo && fetchArtTwoData();
-            }, 500);
-            
-            return () => clearTimeout(timer);
-            }, [artTwo]);
+    }, [art]);
+        //console.log(jsonData))
+ 
+            // console.log(randomArt);
+    //     });
+    // })
+    // .catch(err => console.log(err));
+       
+    
+    
+    // const
+    // useEffect(() => {
+    //     const fetchArtData = async () => {
 
-            useEffect(() => {
-                const fetchArtThreeData = async () => {
-                    const result = await Axios(`https://collectionapi.metmuseum.org/public/collection/v1/objects/326717`);
-                    console.log(result.data);
-                    setArtThree(result.data);
-                };
-                
-                if(artThree) {
-                    setLoading(false);
-                }
-                const timer = setTimeout(() => {
-                    !artThree && fetchArtThreeData();
-                }, 500);
-                
-                return () => clearTimeout(timer);
-                }, [artThree]);
+//             const randomID = randomArt[Math.floor(Math.random() * randomArt.length)];
+//             const result =  Axios(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomID}`);
+//             console.log(result.data);
+// // //             // setArt(randomID.data);
+//     }
+//     });
+// }
+// .catch(err => console.log(err));
+// });
+       
+        // randomArt (art); {
+        //     return art[Math.floor(Math.random() * art.length)];
+        // }
+        
+        // if(art) {
+        //     setLoading(false);
+        // }
+        // const timer = setTimeout(() => {
+        //     !art && fetchArtData();
+        // }, 500);
+        
+        // return () => clearTimeout(timer);
+        // }, [art]);
+        
+        // useEffect(() => {
+        //     const fetchArtTwoData = async () => {
+        //         const result = await Axios(`https://collectionapi.metmuseum.org/public/collection/v1/objects/432`);
+        //         console.log(result.data);
+        //         setArtTwo(result.data);
+        //     };
             
-    return (
-        loading ? <h3>Creating art...</h3> :
-         // light/dark mode
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="Artgallery" id={theme} >   
-      <div className={theme=== 'dark' ? style.dark : style.light}>
-      <div className="switch">
-          {/* <label> {theme === "light" ? "Light Mode" : "Dark Mode"}</label> */}
-        <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
-        </div>
-    {/* light/dark mode */}
+        //     if(artTwo) {
+        //         setLoading(false);
+        //     }
+        //     const timer = setTimeout(() => {
+        //         !artTwo && fetchArtTwoData();
+        //     }, 500);
+            
+        //     return () => clearTimeout(timer);
+        //     }, [artTwo]);
+
+        //     useEffect(() => {
+        //         const fetchArtThreeData = async () => {
+        //             const result = await Axios(`https://collectionapi.metmuseum.org/public/collection/v1/objects/326717`);
+        //             console.log(result.data);
+        //             setArtThree(result.data);
+        //         };
+                
+        //         if(artThree) {
+        //             setLoading(false);
+        //         }
+        //         const timer = setTimeout(() => {
+        //             !artThree && fetchArtThreeData();
+        //         }, 500);
+                
+        //         return () => clearTimeout(timer);
+        //         }, [artThree]);
+            
   
-        <div className={style.artContainer}>
-            <h1>The Metropolitan Museum of Art</h1>
+
+    return (
+    //     loading ? <h3>Creating art...</h3> :
+    //      // light/dark mode
+    //     <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    //   <div className="Artgallery" id={theme} >   
+    //   <div className={theme=== 'dark' ? style.dark : style.light}>
+    //   <div className="switch">
+    //       {/* <label> {theme === "light" ? "Light Mode" : "Dark Mode"}</label> */}
+    //     <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
+    //     </div>
+    // {/* light/dark mode */}
+  
+         <div className={style.artContainer}>
+             {/* <h1>The Metropolitan Museum of Art</h1>
           <h2>{art.title}</h2>
           <h5>{art.accessionYear}</h5>
           <h3>{art.artistDisplayName}</h3>
-          <img src={art.primaryImage} />
+          <img src={art.primaryImage} />   */}
           
-          <h2>{artTwo.title}</h2>
-          <h5>{artTwo.accessionYear}</h5>
-          <h3>{artTwo.artistDisplayName}</h3>
-          <img src={artTwo.primaryImage} />
+    //       {/* <h2>{artTwo.title}</h2>
+    //       <h5>{artTwo.accessionYear}</h5>
+    //       <h3>{artTwo.artistDisplayName}</h3>
+    //       <img src={artTwo.primaryImage} />
 
-          <h2>{artThree.title}</h2>
-          <h5>{artThree.accessionYear}</h5>
-          <h3>{artThree.artistDisplayName}</h3>
-          <img src={artThree.primaryImage} />
-        </div>
+    //       <h2>{artThree.title}</h2>
+    //       <h5>{artThree.accessionYear}</h5>
+    //       <h3>{artThree.artistDisplayName}</h3>
+    //       <img src={artThree.primaryImage} /> */}
+    //     {/* </div> */}
         
-        {/* light/dark mode */}
-        </div>
-        </div>
-        </ThemeContext.Provider>
+    //     {/* light/dark mode */}
+    {/* //     </div> */}
+    //     </div>
+    //     </ThemeContext.Provider>
     );
-};
+
+
+}
+
 export default ArtgalleryScreen;
