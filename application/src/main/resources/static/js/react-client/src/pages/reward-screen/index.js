@@ -68,20 +68,20 @@ const RewardScreen = () => {
             <h3>These are the Rewards</h3>
             {rewards.map(rewards => (
                 <p key={rewards.id}>
-                    <h1 class="reward_name">Reward Name: {rewards.name}</h1>
-                    <h2 class="reward_price">Price: {rewards.price}</h2>
+                    <h1 className="reward_name">Reward Name: {rewards.name}</h1>
+                    <h2 className="reward_price">Price: {rewards.price}</h2>
                     <img id="rewards_image" alt="fake token">{rewards.urlImg}</img>
-                    <h2 class="rarity">Rarity: {rewards.stars} </h2>
-                    <h3 class="rewards_description">Description: {rewards.description}</h3>
+                    <h2 className="rarity">Rarity: {rewards.stars} </h2>
+                    <h3 className="rewards_description">Description: {rewards.description}</h3>
                     </p>
             ))}
         </div>
         </section>
         </div>
 
-    // </div>
-    // </div>   
-    // </ThemeContext.Provider>      
+     </div>
+     </div>   
+     </ThemeContext.Provider>      
     );
     
 }
