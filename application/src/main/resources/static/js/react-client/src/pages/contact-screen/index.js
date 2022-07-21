@@ -75,7 +75,7 @@ const ContactScreen = () => {
                 
                                 <a href='https://github.com/cljenkinsjr/jackr-enterprises-site'></a>
                             </article> */}
-                        <br></br><br></br><br></br>
+                        <br></br><br></br>
             <h1 style={styles.reviews}>Reviews</h1>
             <div className='Rwrapper' style={styles.Rwrapper} alt='Rwrapper'>
             <div className='stars'style={styles.stars} alt='stars'>
@@ -125,7 +125,7 @@ const styles={
         flex:'1'
       },
       reviews:{
-        backgroundColor:'black'
+       
       },
 
       card:{
