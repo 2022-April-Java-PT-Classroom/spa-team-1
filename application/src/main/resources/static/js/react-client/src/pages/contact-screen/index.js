@@ -89,7 +89,7 @@ const styles={
         display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-                 },
+     },
       founders:{
         display: 'flex', 
         flex:'1'
