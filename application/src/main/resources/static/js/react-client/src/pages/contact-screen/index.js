@@ -125,7 +125,6 @@ const styles={
         flex:'1'
       },
       reviews:{
-       
       },
 
       card:{

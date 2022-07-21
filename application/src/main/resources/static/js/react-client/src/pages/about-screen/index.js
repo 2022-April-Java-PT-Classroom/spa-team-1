@@ -50,17 +50,15 @@ const [ theme, setTheme ] = useState("dark");
                         <div className="Card" id='3'style={styles.card}>
                               <h5 className="aboutH2">Gail</h5>
                               <img className='pics' src={gailIcon} alt="Gail Pic" />
-                              <p>Hi, I am Cleveland based junior developer. 
+                              <p>Hi, I am a Cleveland based junior developer. 
                                     I love learning, animals, being outdoors, 
                                     and spending time with my family.
-                                    
-                              </p>
+                                    </p>
                         </div>
                         </div>
                         <div style={styles.group2}>
                               <div className="Card" style={styles.spacer}>
-                                    <h2></h2>
-                              </div>
+                                    <h2></h2>                              </div>
                         <div className="Card" id='4'style={styles.card}>
                               <h5 className="aboutH2">Victor</h5>
                               <img className='pics' src={victorIcon} alt="Vic pic" />
@@ -104,21 +102,21 @@ const styles={
             // justifyContent:'space-around',
       }, 
       group2:{
-            columnGap:'162px',
+            columnGap:'161px',
             display: 'flex',
       }, 
       spacer:{
-       width:'140px'
+       width:'0px'
       },
       card:{
             backgroundColor:'black',
+      
             padding:'50',
             border: '5px solid#e0b12d',
             width: '160px',
       justifyContent:'Center'
       },
       pics:{
-      width:'200px',      
       height:'auto'
       }
 
