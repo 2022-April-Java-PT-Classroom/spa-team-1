@@ -26,12 +26,12 @@ const ArtgalleryScreen = () => {
 
         const fetchArtData = async() => {
             const randomArt = await Axios(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomID}`);
-            console.log(randomArt.data);
+            console.log(randomArt.data[randomID]);
             setArt(randomArt.data);
         };
 
         if (art) {
-            setArt(false);
+            setLoading(false);
         
         }
         const timer = setTimeout(() => {
@@ -39,81 +39,11 @@ const ArtgalleryScreen = () => {
         }, 1000);
         return () => clearTimeout(timer);
     }, [art]);
-        //console.log(jsonData))
- 
-            // console.log(randomArt);
-    //     });
-    // })
-    // .catch(err => console.log(err));
+            
        
-    
-    
-    // const
-    // useEffect(() => {
-    //     const fetchArtData = async () => {
-
-//             const randomID = randomArt[Math.floor(Math.random() * randomArt.length)];
-//             const result =  Axios(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomID}`);
-//             console.log(result.data);
-// // //             // setArt(randomID.data);
-//     }
-//     });
-// }
-// .catch(err => console.log(err));
-// });
-       
-        // randomArt (art); {
-        //     return art[Math.floor(Math.random() * art.length)];
-        // }
-        
-        // if(art) {
-        //     setLoading(false);
-        // }
-        // const timer = setTimeout(() => {
-        //     !art && fetchArtData();
-        // }, 500);
-        
-        // return () => clearTimeout(timer);
-        // }, [art]);
-        
-        // useEffect(() => {
-        //     const fetchArtTwoData = async () => {
-        //         const result = await Axios(`https://collectionapi.metmuseum.org/public/collection/v1/objects/432`);
-        //         console.log(result.data);
-        //         setArtTwo(result.data);
-        //     };
-            
-        //     if(artTwo) {
-        //         setLoading(false);
-        //     }
-        //     const timer = setTimeout(() => {
-        //         !artTwo && fetchArtTwoData();
-        //     }, 500);
-            
-        //     return () => clearTimeout(timer);
-        //     }, [artTwo]);
-
-        //     useEffect(() => {
-        //         const fetchArtThreeData = async () => {
-        //             const result = await Axios(`https://collectionapi.metmuseum.org/public/collection/v1/objects/326717`);
-        //             console.log(result.data);
-        //             setArtThree(result.data);
-        //         };
-                
-        //         if(artThree) {
-        //             setLoading(false);
-        //         }
-        //         const timer = setTimeout(() => {
-        //             !artThree && fetchArtThreeData();
-        //         }, 500);
-                
-        //         return () => clearTimeout(timer);
-        //         }, [artThree]);
-            
-  
 
     return (
-        // loading ? <h3>Creating art...</h3> :
+        loading ? <h3>Creating art...</h3> :
          // light/dark mode
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="Artgallery" id={theme} >   
@@ -125,12 +55,16 @@ const ArtgalleryScreen = () => {
     {/* light/dark mode */}
          <div>
             <section className ={style.artContainer}>
-              {/* <h1>The Metropolitan Museum of Art</h1>
-          <h2>{art.title}</h2>
-          <h5>{art.accessionYear}</h5>
-          <h3>{art.artistDisplayName}</h3>
-          <img src={art.primaryImage} />    */}
-          
+            <h1>The Metropolitan Museum of Art</h1>
+            {/* {setArt.map(art => ( 
+          <div key={art.objectID}> */}
+            <h2>{art.title}</h2>
+          {/* </div> */}
+          {/* ))} */}
+          {/* <h5>{art[0].accessionYear}</h5>
+          <h3>{art[0].artistDisplayName}</h3>
+          <img src={art[0].primaryImage}/>   
+        */}
         {/* light/dark mode */}
         </section>
         <button onClick="window.location.href=window.location.href">See More!</button>
