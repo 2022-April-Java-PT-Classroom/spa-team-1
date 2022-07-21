@@ -13,46 +13,17 @@
  font-size: 75px;
  color: white;
  margin-top: 100px;
- }
+  }
+  #2{
+    background-color: black;
+  }
 
  .aboutScreen{
    display: flex;
    justify-content: center;
    justify-items: center;
  }
- .card1{
-   background-repeat: none;
-   grid-column: 1;
-  }
- .card2{
-   background-repeat: none;
-   grid-column: 2;
- }
- .card3{
-   background-repeat: none;
-     grid-column: 3;
-   }
- .card4{
-   background-repeat: none;
-     grid-column: 1;
-     grid-row: 2;
-   }
- .card5 {
-   background-repeat: none;
-     grid-column: 2;
-     grid-row: 2;
-   }
- .card6  {
-   background-repeat: none;
-     grid-column: 3;
-     grid-row: 2;
-   }
- .devInfo{
-   color:white;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
+
 
 .light {
   background-image: url(../../assets/background/pages-light-background.png) !important;
@@ -63,4 +34,9 @@
   background-image: url(../../assets/background/pages-dark-background.png) !important;
   color: white;
   background-size: cover;
+  &
+  .card{
+    background-color: black!important; 
+  }
  }
+ 
