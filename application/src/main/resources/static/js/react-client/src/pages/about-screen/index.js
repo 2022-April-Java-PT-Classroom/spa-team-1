@@ -62,7 +62,9 @@ const [ theme, setTheme ] = useState("dark");
                         <div className="Card5" id='5'>
                               <h2 className="aboutH2">Adrian</h2>
                               <img src={adrianIcon} alt="Adrian Pic" />
-                              <p>lorem Ipsum</p>
+                              <p>Entry-level Software Developer located in the greater Cleveland area. I am currently attending
+                                     We Can Code IT to become a full stack developer. I graduated Kent State University in 2018
+                                      with a Bachelor of Arts in Communication Studies with an Applied Communication concentration.</p>
                         </div>
                         <div className="Card6" id='6'>
                               <h2 className="aboutH2">Jalyn</h2>
