@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74a5be0a-bfe4-4dfa-a2b5-c290214e517a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/application/src/main/resources/static/js/react-client/src/pages/math-screen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/resources/static/js/react-client/src/pages/math-screen/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/main/java/org/wecancodeit/serverside/controllers/RewardsRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/org/wecancodeit/serverside/controllers/RewardsRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/main/java/org/wecancodeit/serverside/models/Rewards.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/org/wecancodeit/serverside/models/Rewards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/main/java/org/wecancodeit/serverside/populator.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/org/wecancodeit/serverside/populator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/main/resources/static/js/react-client/src/components/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/resources/static/js/react-client/src/components/header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/main/resources/static/js/react-client/src/pages/reward-screen/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/resources/static/js/react-client/src/pages/reward-screen/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

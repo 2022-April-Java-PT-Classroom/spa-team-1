@@ -1,11 +1,23 @@
-body {
-    background-image: url(../../assets/background/light-mode-background.png);
+// body {
+//     background-image: url(../../assets/background/light-mode-background.png);
+//     background-size: cover;
+
+//     & p {
+//         text-align: center;
+//         max-width: 50%;
+//     }
+// }
+
+ .light {
+    background-image: url(../../assets/background/light-mode-background.png) !important;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-
-    & p {
-        text-align: center;
-        max-width: 50%;
-    }
-}
-
-
+   }
+  
+.dark {
+    background-image: url(../../assets/background/dark-mode-background.png) !important;
+    color: white;
+    background-size: cover;
+   }
