@@ -1,11 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 
 import Axios from 'axios';
+import ReactSwitch from "react-switch";
+import style from './style.module.scss';
 
 const randomNum = Math.floor((Math.random() * 116));
 
+export const ThemeContext = createContext(null);
+
 const FishPage = () => {
   
+    const [ theme, setTheme ] = useState("dark");
+    const toggleTheme = () => {
+      setTheme((curr) => (curr === "light" ? "dark" : "light"));
+    };
+    
     const [fishes, setFishes] = useState(null);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -29,7 +38,17 @@ const FishPage = () => {
     }, [fishes]);
 
 return (
+
     loading ? <h3>loading fish...</h3> :
+    
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+            <div className="Contact" id={theme} >   
+            <div className={theme=== 'dark' ? style.dark : style.light}>
+            <div className="switch">
+
+            <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
+            </div>
+    
     <div>
         <h3>{fishes['Species Name']}</h3>
         <h3>{fishes['Scientific Name']}</h3>
@@ -45,7 +64,14 @@ return (
             <ul>Fiber, Total Dietary : {fishes['Fiber, Total Dietary']}</ul>
             <ul>Sodium : {fishes['Sodium']}</ul>
             </div>
-    </div>
+
+            
+            </div>
+                </div>
+                </div>
+                </ThemeContext.Provider> 
+           
+        
     );
 };
 
