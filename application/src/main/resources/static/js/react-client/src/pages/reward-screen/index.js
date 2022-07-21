@@ -16,7 +16,7 @@ const RewardScreen = () => {
 // light/dark mode
     
     // const { id } = useParams();
-    const [rewards, setRewards] = useState(null)
+    const [rewards, setRewards] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
