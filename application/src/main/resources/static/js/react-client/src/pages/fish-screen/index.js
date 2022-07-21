@@ -39,16 +39,16 @@ const FishPage = () => {
 
 return (
 
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
-    <div className="Contact" id={theme} >   
-    <div className={theme=== 'dark' ? style.dark : style.light}>
-    <div className="switch">
-
-    <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
-    </div>
-
-
     loading ? <h3>loading fish...</h3> :
+    
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+            <div className="Contact" id={theme} >   
+            <div className={theme=== 'dark' ? style.dark : style.light}>
+            <div className="switch">
+
+            <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
+            </div>
+    
     <div>
         <h3>{fishes['Species Name']}</h3>
         <h3>{fishes['Scientific Name']}</h3>
@@ -64,10 +64,14 @@ return (
             <ul>Fiber, Total Dietary : {fishes['Fiber, Total Dietary']}</ul>
             <ul>Sodium : {fishes['Sodium']}</ul>
             </div>
-    </div>
-    </div>
-    </div>   
-    </ThemeContext.Provider> 
+
+            
+            </div>
+                </div>
+                </div>
+                </ThemeContext.Provider> 
+           
+        
     );
 };
 
