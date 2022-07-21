@@ -15,12 +15,15 @@ const colors ={
 export const ThemeContext = createContext(null);
 
 const ContactScreen = () => {
-    var stars= Array(5).fill(0);
 
     const [ theme, setTheme ] = useState("dark");
     const toggleTheme = () => {
       setTheme((curr) => (curr === "light" ? "dark" : "light"));
     };
+
+    var stars= Array(5).fill(0);
+
+
 
    const[currentValue, setCurrentValue]= React.useState(0);
    const[hoverValue, setHoverValue] = React.useState(undefined); 
@@ -55,14 +58,16 @@ const ContactScreen = () => {
                          <h2>JAC Enterprises</h2>
                         <div className= 'founders'style= {styles.founders} alt='founders'>
                             <div style={styles.card} alt='cliff'>
-                                <img src={cliffIcon} alt='Cliff Jenkins CEO'/>
-                                <a>Cliff Jenkins CEO</a>
+                                <img src={cliffIcon} alt='Cliff Jenkins CEO'/><br></br>
+                                <a>Cliff Jenkins<br></br> CEO</a>
                                 </div>
-                                <div style={styles.card} alt='alan'>                                <img src={alanIcon} alt='Alan Kostrick VP'/>
-                                <a>Alan Kostrick Vice President</a>
+                                <div style={styles.card} alt='alan'>                                
+                                <img src={alanIcon} alt='Alan Kostrick VP'/><br></br>
+                                <a>Alan Kostrick<br></br> Vice President</a>
                             </div>
-                            <div style={styles.card} alt='jordan'>                                <img src={jordanIcon} alt='Jordan Gilpin Retired' />
-                                <a>Jordan Gilpin You are Missed</a>
+                            <div style={styles.card} alt='jordan'>                                
+                            <img src={jordanIcon} alt='Jordan Gilpin Retired' /><br></br>
+                                <a>Jordan Gilpin <br></br>You are Missed</a>
                             </div>
                         </div>
                             {/* <h2>Contact Us</h2> */}
@@ -70,8 +75,8 @@ const ContactScreen = () => {
                 
                                 <a href='https://github.com/cljenkinsjr/jackr-enterprises-site'></a>
                             </article> */}
-                        
-            <h1>Reviews</h1>
+                        <br></br><br></br><br></br>
+            <h1 style={styles.reviews}>Reviews</h1>
             <div className='Rwrapper' style={styles.Rwrapper} alt='Rwrapper'>
             <div className='stars'style={styles.stars} alt='stars'>
                 {stars.map((_, index)=>{
@@ -115,13 +120,20 @@ const styles={
      },
       founders:{
         display: 'flex', 
+        justifyContent:'space-between',
+        gap: '20px',
         flex:'1'
       },
-      
+      reviews:{
+        backgroundColor:'black'
+      },
 
       card:{
+        backgroundColor:'black',
         diplay:'flex',
-        flexDirection:'Column'
+        flexDirection:'Column',
+        border: '5px solid#e0b12d',
+
     },
     Rwrapper:{
        display:'flex', 
