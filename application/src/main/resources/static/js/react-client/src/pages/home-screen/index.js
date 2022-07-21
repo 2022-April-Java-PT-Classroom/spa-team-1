@@ -29,25 +29,49 @@ const Homescreen = () => {
 
         <section className={style.artsection}>
           <div className={style.artimg}>
-            <img className={style.mysterybox} src={box} alt="mystery box" />
+          <a href="/artgallery"><img className={style.mysterybox} src={box} alt="mystery box" />
+          </a>
+          </div>
+          <div className={style.artText}>
+            <h2>Art Museum</h2>
+            <p>Learn more about history through creativity</p>
+            
           </div>
         </section>
 
         <section className={style.fishsection}>
           <div className={style.fishimg}>
-            <img className={style.mysterybox} src={box} alt="mystery box" />
+          <a href="/fish"><img className={style.mysterybox} src={box} alt="mystery box" />
+          </a>
+          </div>
+          <div className={style.fishText}>
+            <h2>Aquarium</h2>
+            <p>Learn more about fish wildlife</p>
+            
           </div>
         </section>
 
         <section className={style.mathsection}>
           <div className={style.mathimg}>
-            <img className={style.mysterybox} src={box} alt="mystery box" />
+          <a href="/math"><img className={style.mysterybox} src={box} alt="mystery box" />
+          </a>
+          </div>
+          <div className={style.mathText}>
+            <h2>Math Facts</h2>
+            <p>Practice with some fun</p>
+            
           </div>
         </section>
 
         <section className={style.rewardsection}>
           <div className={style.rewardimg}>
-            <img className={style.mysterybox} src={box} alt="mystery box" />
+          <a href="/reward"><img className={style.mysterybox} src={box} alt="mystery box" />
+          </a>
+          </div>
+          <div className={style.artText}>
+            <h2>Rewards</h2>
+            <p>Check out what you've earned!</p>
+            
           </div>
         </section>
 
