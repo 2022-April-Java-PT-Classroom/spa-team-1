@@ -8,6 +8,7 @@ import HomeScreen from '../../pages/home-screen';
 import MathScreen from '../../pages/math-screen';
 import React from "react";
 import RewardScreen from '../../pages/reward-screen';
+import MathsScreen from '../../pages/maths-screen';
 
 const AppRouter = () => {
     return (
@@ -19,6 +20,10 @@ const AppRouter = () => {
             <Route exact path={'/fish'} component={FishScreen} />
             <Route exact path={'/math'} component={MathScreen} />
             <Route exact path={'/reward'} component={RewardScreen} />
+            <Route exact path={`/math/:id`}>
+                <MathsScreen />
+            </Route>
+
         </Switch>
     );
 }
