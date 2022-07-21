@@ -37,6 +37,10 @@ const ArtgalleryScreen = () => {
         }, 1000);
         return () => clearTimeout(timer);
     }, [art]);
+
+    function newArt () {
+        window.location.reload(false);
+    }
             
        
 
@@ -61,7 +65,7 @@ const ArtgalleryScreen = () => {
         
         {/* light/dark mode */}
         </section>
-        <button onClick="window.location.href=window.location.href">See More!</button>
+        <button onClick={newArt}>See More!</button>
         </div>
         </div>
         </div>
