@@ -1,11 +1,11 @@
 package org.wecancodeit.serverside.repositories;
 
 import org.springframework.data.repository.CrudRepository;
-import org.wecancodeit.serverside.models.MathModel;
+import org.wecancodeit.serverside.models.Math;
 
 import java.util.Optional;
 
-public interface MathRepository extends CrudRepository<MathModel, Long> {
-    Optional<MathModel> findByName(String MathName);
+public interface MathRepository extends CrudRepository<Math, Long> {
+    Optional<Math> findByName(String MathName);
 //    this will stop duplication
 }
