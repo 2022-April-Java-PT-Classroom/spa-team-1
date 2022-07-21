@@ -16,8 +16,6 @@ const ArtgalleryScreen = () => {
      // light/dark mode
 
     const [art, setArt] = useState(null);
-    // const [artTwo, setArtTwo] = useState(null);
-    // const [artThree, setArtThree] = useState(null);
     const [loading, setLoading] = useState(true);
     
     const randomID = Math.floor((Math.random() * 50) +1);
@@ -56,15 +54,11 @@ const ArtgalleryScreen = () => {
          <div>
             <section className ={style.artContainer}>
             <h1>The Metropolitan Museum of Art</h1>
-            {/* {setArt.map(art => ( 
-          <div key={art.objectID}> */}
             <h2>{art.title}</h2>
-          {/* </div> */}
-          {/* ))} */}
-          {/* <h5>{art[0].accessionYear}</h5>
-          <h3>{art[0].artistDisplayName}</h3>
-          <img src={art[0].primaryImage}/>   
-        */}
+      <h5>{art.accessionYear}</h5>
+          <h3>{art.artistDisplayName}</h3>
+          <img src={art.primaryImage}/>   
+        
         {/* light/dark mode */}
         </section>
         <button onClick="window.location.href=window.location.href">See More!</button>
