@@ -1,17 +1,10 @@
-<<<<<<< HEAD
 import JacLogoL from '../../assets/logo/JAC-Game-light.png';
-import React from 'react';
+import React, { createContext, useState } from "react";
+import ReactSwitch from "react-switch";
 import alanIcon from '../../assets/contact/alan1.png';
 import cliffIcon from '../../assets/contact/cliff1.png';
 import jordanIcon from '../../assets/contact/jordan1.png';
-=======
-import React, { createContext, useState } from "react";
 
-import ReactSwitch from "react-switch";
-import alanIcon from '../../assets/contact/alan.png';
-import cliffIcon from '../../assets/contact/cliff.png';
-import jordanIcon from '../../assets/contact/jordan.png';
->>>>>>> main
 import style from './style.module.scss';
 import {FaStar} from 'react-icons/fa';
 const colors ={
@@ -22,8 +15,13 @@ const colors ={
 export const ThemeContext = createContext(null);
 
 const ContactScreen = () => {
-<<<<<<< HEAD
     var stars= Array(5).fill(0);
+
+    const [ theme, setTheme ] = useState("dark");
+    const toggleTheme = () => {
+      setTheme((curr) => (curr === "light" ? "dark" : "light"));
+    };
+
    const[currentValue, setCurrentValue]= React.useState(0);
    const[hoverValue, setHoverValue] = React.useState(undefined); 
    
@@ -43,6 +41,16 @@ const ContactScreen = () => {
 
 
         return(
+
+            
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <div className="Contact" id={theme} >   
+        <div className={theme=== 'dark' ? style.dark : style.light}>
+        <div className="switch">
+            {/* <label> {theme === "light" ? "Light Mode" : "Dark Mode"}</label> */}
+          <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
+          </div>
+
           <div className="fWrapper"style={styles.container}alt='container'>
                          <h2>JAC Enterprises</h2>
                         <div className= 'founders'style= {styles.founders} alt='founders'>
@@ -89,6 +97,9 @@ const ContactScreen = () => {
                 />
             </div>
           </div>
+          </div>
+    </div>   
+    </ThemeContext.Provider>   
         )
     
   
@@ -133,38 +144,6 @@ const styles={
       }
 
     
-=======
-
-    const [ theme, setTheme ] = useState("dark");
-    const toggleTheme = () => {
-      setTheme((curr) => (curr === "light" ? "dark" : "light"));
-    };
-    
-    return (
-
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="Contact" id={theme} >   
-      <div className={theme=== 'dark' ? style.dark : style.light}>
-      <div className="switch">
-          {/* <label> {theme === "light" ? "Light Mode" : "Dark Mode"}</label> */}
-        <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
-        </div>
-        
-        <div className={style.ContactScreen}>
-            <h2>Contact Us!</h2>
-            <img src={cliffIcon} alt='Cliff Jenkins CEO' />
-            <img src={alanIcon} alt='Alan Kostrick VP' />
-            <img src={jordanIcon} alt='Jordan Gilpin Retired' />
-            <h2>Contact Us</h2>
-            <article>
-                {/* <a href='https://github.com/cljenkinsjr/jackr-enterprises-site'></a> */}
-            </article>
-        </div>
-    </div>
-    </div>   
-    </ThemeContext.Provider>    
-    );
->>>>>>> main
 }
 
 export default ContactScreen;
