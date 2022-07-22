@@ -68,11 +68,11 @@ const RewardScreen = () => {
             <h3>These are the Rewards</h3>
             {rewards.map(rewards => (
                 <div key={rewards.id}>
-                    <p className="reward_name">Reward Name: {rewards.name}</p>
+                    <h1 className="reward_name">{rewards.name}</h1>
                     <p className="reward_price">Price: {rewards.price}</p>
                     <img className="rewards_image" src={rewards.urlImg}></img>
                     <p className="rarity">Rarity: {rewards.stars} </p>
-                    <p className="rewards_info">Description: {rewards.description}</p>
+                    <p className="rewards_info">Summary: {rewards.description} </p>
                     </div>
             ))}
         </div>

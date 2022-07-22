@@ -1,13 +1,35 @@
 .light {
     background-image: url(../../assets/background/pages-light-background.png) !important;
     background-size: cover;
-   }
+}
   
 .dark {
     background-image: url(../../assets/background/pages-dark-background.png) !important;
     color: white;
     background-size: cover;
-   }
-.rewardsSection{
-    border: 10px solid blue;
+}
+.id {
+    border: 10px solid grey; 
+}
+.rewardsText div h1{
+    font-size: 35px;
+    background: linear-gradient(to right, blue, red , green, orange, purple, yellow);
+    -webkit-background-clip: text;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-clip: text;
+    color: transparent;
+    // position: absolute;
+    animation: rainbow_animation 1s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+@keyframes rainbow_animation {
+    100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
 }
