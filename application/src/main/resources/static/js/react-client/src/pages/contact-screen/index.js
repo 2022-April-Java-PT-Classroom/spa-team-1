@@ -1,12 +1,13 @@
-import JacLogoL from '../../assets/logo/JAC-Game-light.png';
 import React, { createContext, useState } from "react";
+
+import {FaStar} from 'react-icons/fa';
+import JacLogoL from '../../assets/logo/JAC-Game-light.png';
 import ReactSwitch from "react-switch";
 import alanIcon from '../../assets/contact/alan1.png';
 import cliffIcon from '../../assets/contact/cliff1.png';
 import jordanIcon from '../../assets/contact/jordan1.png';
-
 import style from './style.module.scss';
-import {FaStar} from 'react-icons/fa';
+
 const colors ={
  orange:'#FFBA5A',
  grey: '#a9a9a9'

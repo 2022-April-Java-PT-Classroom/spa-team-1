@@ -4,10 +4,10 @@ import ReactSwitch from "react-switch";
 import adrianIcon from '../../assets/about/adrian.png'
 import gailIcon from '../../assets/about/gail.png';
 import gianIcon from '../../assets/about/gian.png';
+import jalynIcon from '../../assets/about/jalyn.png'
 import stephIcon from '../../assets/about/steph.png';
 import style from './style.module.scss';
 import victorIcon from '../../assets/about/victor.png'
-import jalynIcon from '../../assets/about/jalyn.png'
 
 export const ThemeContext = createContext(null);
 
@@ -67,7 +67,7 @@ const [ theme, setTheme ] = useState("dark");
                         <div className="Card" id='5'style={styles.card}>
                               <h5 className="aboutH2">Adrian</h5>
                               <img className='pics' src={adrianIcon} alt="Adrian Pic" />
-                              <p>lorem Ipsum</p>
+                              <p>Hello! I am an entry-level developer located in the greater Cleveland area. I enjoy rollerskating, cats & coffee.</p>
                         </div>
                         <div className="Card" id='6'style={styles.card}>
                               <h5 className="aboutH2">Jalyn</h5>
