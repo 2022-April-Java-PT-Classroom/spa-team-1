@@ -18,13 +18,13 @@ const ArtgalleryScreen = () => {
     const [art, setArt] = useState(null);
     const [loading, setLoading] = useState(true);
     
-    const randomID = Math.floor((Math.random() * 50) +1);
+    const randomID = Math.floor((Math.random() * 500) +1);
 
     useEffect(() => {
 
         const fetchArtData = async() => {
             const randomArt = await Axios(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomID}`);
-            console.log(randomArt.data[randomID]);
+            console.log(randomArt.data);
             setArt(randomArt.data);
         };
 
@@ -58,10 +58,11 @@ const ArtgalleryScreen = () => {
          <div>
             <section className ={style.artContainer}>
             <h1>The Metropolitan Museum of Art</h1>
-            <h2>{art.title}</h2>
-      <h5>{art.accessionYear}</h5>
-          <h3>{art.artistDisplayName}</h3>
+            <h3>{art.title}</h3>
+          <h4>{art.artistDisplayName}</h4>
           <img src={art.primaryImage}/>   
+          <h5>{art.period}</h5>
+          <h5>{art.objectDate}</h5>
         
         {/* light/dark mode */}
         </section>
