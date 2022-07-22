@@ -55,10 +55,10 @@ const RewardScreen = () => {
 // light/dark mode
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="Contact" id={theme} >   
-      <div className={theme=== 'dark' ? style.dark : style.light}>
+      <div className={theme=== 'light' ? style.dark : style.light}>
       <div className="switch">
           {/* <label> {theme === "light" ? "Light Mode" : "Dark Mode"}</label> */}
-        <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
+        <ReactSwitch onChange={toggleTheme} checked={theme === "light"}/>
         </div>
 {/* light/dark mode */}
 

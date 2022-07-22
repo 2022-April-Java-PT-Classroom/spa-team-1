@@ -8,9 +8,6 @@
     color: white;
     background-size: cover;
 }
-.id {
-    border: 10px solid grey; 
-}
 .rewardsText div h1{
     font-size: 35px;
     background: linear-gradient(to right, blue, red , green, orange, purple, yellow);
@@ -32,4 +29,14 @@
     50% {
         background-position: 100% 0;
     }
+}
+.rewardsText p{
+    font-size: 20px;
+}
+.rewardsText div{
+    background-color: rgb(248, 245, 245);
+    margin: 2rem 60rem;
+    border: double 0.3em transparent;
+    border-radius: 10px;
+
 }
