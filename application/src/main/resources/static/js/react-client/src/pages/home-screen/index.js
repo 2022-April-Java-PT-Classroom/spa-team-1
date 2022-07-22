@@ -25,13 +25,14 @@ const Homescreen = () => {
 
       
         <div className={style.Homescreen}>
-        <h2>Welcome to the Mystery Learning Site</h2>
+        <h1>Welcome to the Mystery Learning Site</h1>
         </div>
 
         <section className={style.artsection}>
         <div className={style.artText}>
             <h2>Art Museum</h2>
-            <p>Learn more about history through creativity</p>
+            <p>Learn more about history<br></br> 
+              through creativity</p>
           </div>
           <div className={style.artimg}>
           <a href="/artgallery"><img className={style.mysterybox} src={box} alt="mystery box" />

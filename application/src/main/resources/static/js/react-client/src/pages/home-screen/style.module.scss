@@ -1,8 +1,13 @@
 * {
    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
    font-family: 'Press Start 2P', cursive;
+   cursor: url('../../assets/homepagepics/mario.gif'),auto;
 }
 
+h1 {
+   margin-top: 20px;
+   font-size: 50px;
+}
  .light {
     background-image: url(../../assets/background/light-mode-background.png) !important;
     background-repeat: no-repeat;
@@ -25,26 +30,26 @@
 .artsection {
    position: absolute;
    bottom: 5px;
-   left: 80px;
+   left: 75px;
 
 }
 
 .fishsection {
    position: absolute;
    bottom: -375px;
-   right: 150px;
+   right: 20px;
 
 }
 
 .mathsection {
    position: absolute;
    bottom: -750px;
-   left: 155px;
+   left: 75px;
 }
 
 .rewardsection {
    position: absolute;
-   bottom: -1115px;
-   right: 150px;
+   bottom: -1125px;
+   right: 25px;
 }
 
