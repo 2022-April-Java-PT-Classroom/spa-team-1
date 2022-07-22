@@ -65,11 +65,11 @@ const ContactScreen = () => {
                                 <a>Jordan Gilpin <br></br>You are Missed</a>
                             </div>
                         </div>
-                            {/* <h2>Contact Us</h2> */}
-                            {/* <article>
+                             <h2>Contact Us</h2> 
+                            <article>
                 
-                                <a href='https://github.com/cljenkinsjr/jackr-enterprises-site'></a>
-                            </article> */}
+                                <a href='https://github.com/cljenkinsjr/jackr-enterprises-site'>JAC Enterprises</a>
+                            </article> 
                         <br></br><br></br>
             <h1 style={styles.reviews}>Reviews</h1>
             <div className='Rwrapper' style={styles.Rwrapper} alt='Rwrapper'>

@@ -1,5 +1,6 @@
 import React, { createContext, useState } from "react";
 
+import { FaCentercode } from "react-icons/fa";
 import ReactSwitch from "react-switch";
 import adrianIcon from '../../assets/about/adrian.png'
 import gailIcon from '../../assets/about/gail.png';
@@ -79,6 +80,12 @@ const [ theme, setTheme ] = useState("dark");
     
 };
 const styles={
+
+      container:{
+            display: 'flex',
+            justifyContent: 'center',
+      },
+      
       cont:{
             width:'600',
             display: 'flex',

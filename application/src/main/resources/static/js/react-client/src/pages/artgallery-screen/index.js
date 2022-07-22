@@ -18,7 +18,7 @@ const ArtgalleryScreen = () => {
     const [art, setArt] = useState(null);
     const [loading, setLoading] = useState(true);
     
-    const randomID = Math.floor((Math.random() * 500) +1);
+    const randomID = Math.floor((Math.random() * 800) +1);
 
     useEffect(() => {
 
