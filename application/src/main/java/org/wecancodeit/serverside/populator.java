@@ -30,11 +30,11 @@ public class populator implements CommandLineRunner {
 //        rewardsRepo.save(Uncommon);
 //        Rewards Rare = new Rewards(3L, true,"Rare", 30, "3 Star IMAGE", 3, "LOREM IPSUM");
 //        rewardsRepo.save(Rare);
-        Rewards SuperRare = new Rewards(4L, true, "Super Rare", 40, "static/js/react-client/src/assets/prizes/coin.png", 4, "LOREM IPSUM");
+        Rewards SuperRare = new Rewards(4L, true, "Super Rare", 40, "https://opengameart.org/sites/default/files/styles/medium/public/Coin%20256x256.png", 4, "congrats, you're 1 coin richer!");
         rewardsRepo.save(SuperRare);
-        Rewards Legendary = new Rewards(5L, true, "Legendary", 50, "static/js/react-client/src/assets/prizes/cat.png", 5, "LOREM IPSUM");
+        Rewards Legendary = new Rewards(5L, true, "Legendary", 50, "https://www.clipartkey.com/mpngs/m/149-1494455_colors-download-settings-clipart-png-download-pusheen-cat.png", 5, "Because phat cats are awesome");
         rewardsRepo.save(Legendary);
-        Rewards Godly = new Rewards(6L, true, "God-Like", 60, "static/js/react-client/src/assets/prizes/doge.png", 6, "LOREM IPSUM");
+        Rewards Godly = new Rewards(6L, true, "God-Like", 60, "https://www.pikpng.com/pngl/m/267-2675309_doge-roblox-pixel-t-shirt-clipart.png", 6, "Legendary meme of the century");
         rewardsRepo.save(Godly);
 
 

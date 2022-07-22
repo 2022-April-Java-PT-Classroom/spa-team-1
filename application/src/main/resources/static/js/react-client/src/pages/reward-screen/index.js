@@ -70,9 +70,9 @@ const RewardScreen = () => {
                 <div key={rewards.id}>
                     <p className="reward_name">Reward Name: {rewards.name}</p>
                     <p className="reward_price">Price: {rewards.price}</p>
-                    <p className="rewards_image">{rewards.urlImg}</p>
+                    <img className="rewards_image" src={rewards.urlImg}></img>
                     <p className="rarity">Rarity: {rewards.stars} </p>
-                    <p className="rewards_description">Description: {rewards.description}</p>
+                    <p className="rewards_info">Description: {rewards.description}</p>
                     </div>
             ))}
         </div>
