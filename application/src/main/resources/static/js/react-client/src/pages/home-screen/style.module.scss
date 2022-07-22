@@ -1,31 +1,50 @@
-// body {
-//     background-image: url(../../assets/background/light-mode-background.png);
-//     background-size: cover;
-
-//     & p {
-//         text-align: center;
-//         max-width: 50%;
-//     }
-// }
+* {
+   @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+   font-family: 'Press Start 2P', cursive;
+}
 
  .light {
     background-image: url(../../assets/background/light-mode-background.png) !important;
-    height: 100%;
-    background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
+    background-size: 100%;
+    height: 2800px;
    }
   
 .dark {
     background-image: url(../../assets/background/dark-mode-background.png) !important;
     color: white;
-    background-size: cover;
-    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 2800px;
    }
 
    .end {
       margin-bottom: 0;
   }
 
+.artsection {
+   position: absolute;
+   bottom: 5px;
+   left: 80px;
+
+}
+
+.fishsection {
+   position: absolute;
+   bottom: -375px;
+   right: 150px;
+
+}
+
+.mathsection {
+   position: absolute;
+   bottom: -750px;
+   left: 155px;
+}
+
+.rewardsection {
+   position: absolute;
+   bottom: -1115px;
+   right: 150px;
+}
 
