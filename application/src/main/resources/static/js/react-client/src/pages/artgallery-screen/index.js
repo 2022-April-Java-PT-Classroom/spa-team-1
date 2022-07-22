@@ -66,6 +66,7 @@ const ArtgalleryScreen = () => {
           <h5>Date(s): {art.objectDate}</h5>
           <p>Created in: {art.city}, {art.state}</p>
           <p>{art.country}</p>
+          <p>{art.rightsAndReproduction}</p>
           </section>
         {/* light/dark mode */}
         </section>
