@@ -38,12 +38,6 @@ const ContactScreen = () => {
    const handleMouseLeave=()=>{
     setHoverValue(undefined)
    }
-
-
-
-
-
-
         return(
 
             
@@ -102,6 +96,9 @@ const ContactScreen = () => {
                 style={styles.textarea} alt='textarea'
                 />
             </div>
+
+            
+            
           </div>
           </div>
     </div>   

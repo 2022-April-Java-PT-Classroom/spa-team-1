@@ -1,6 +1,7 @@
 * {
 box-sizing: border-box;
 margin-top: 0;
+margin-bottom: 0;
 }
 
 body {
@@ -31,6 +32,12 @@ body {
     padding: .25rem;
     border: black;
     }
+}
+
+.bowser {
+    background: transparent;
+    height: 50px;
+    width: 50px;
 }
 
 

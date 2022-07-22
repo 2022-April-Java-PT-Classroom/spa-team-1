@@ -1,10 +1,12 @@
 .light {
     background-image: url(../../assets/background/pages-light-background.png) !important;
     background-size: cover;
+    min-height: 100vh;
    }
   
 .dark {
     background-image: url(../../assets/background/pages-dark-background.png) !important;
     color: white;
     background-size: cover;
+    min-height: 100vh;
    }

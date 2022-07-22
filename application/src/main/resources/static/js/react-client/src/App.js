@@ -4,6 +4,7 @@ import AppRouter from './components/app-router';
 import { BrowserRouter } from 'react-router-dom';
 import Footer from './components/footer';
 import Header from './components/header';
+import song from './assets/audio/theme.mp3';
 import style from './style.module.scss';
 
 function App() {
