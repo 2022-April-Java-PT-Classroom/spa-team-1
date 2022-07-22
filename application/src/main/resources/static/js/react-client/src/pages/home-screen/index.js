@@ -65,7 +65,7 @@ const Homescreen = () => {
 
         <section className={style.rewardsection}>
           <div className={style.rewardimg}>
-          <a href="/reward"><img className={style.mysterybox} src={box} alt="mystery box" />
+          <a href="/api/rewards"><img className={style.mysterybox} src={box} alt="mystery box" />
           </a>
           </div>
           <div className={style.artText}>
