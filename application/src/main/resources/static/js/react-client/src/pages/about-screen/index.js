@@ -38,14 +38,7 @@ const [ theme, setTheme ] = useState("dark");
                         <div className="Card " id= '2'style={styles.card}>
                               <h5 className="aboutH2">Gian</h5>
                               <img className='pics' src={gianIcon} alt="Gian Pic" />
-                              <p>I’m an experienced Human Resource professional currently working as an HR Partner for
-                  Amazon, with over 7 years of experience.
-                  {/* This year, I’m fulfilling a personal goal by pivoting in my career to pursue a future in Tech. After
-                  learning Python and other languages on my own, I decided to enroll in an amazing bootcamp, WCCI, that
-                  has an accelerated approach to teaching and training future Software Engineers. Upon completion of my
-                  certification, I will be pursuing a position that will enhance my career. This position would challenge
-                  me to continue to learn, grow my knowledge and push me to construct and deliver software that will make */}
-                  a difference.</p>
+                              <p>Past life HR professional, current life software developer. You can catch me gaming on pc or console most days, or outside smoking a nice cigar.</p>
                         </div>
                         <div className="Card" id='3'style={styles.card}>
                               <h5 className="aboutH2">Gail</h5>
