@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import JaclogoD from '../../assets/logo/JAC-Game-dark.png';
 import { NavLink } from "react-router-dom";
+import shell from '../../assets/homepagepics/shell.gif';
 import song from '../../assets/audio/theme.mp3';
 import style from './style.module.scss';
 
@@ -34,8 +35,7 @@ class Header extends Component {
                 "Song is Playing" : 
                 "Song is Paused"}
               </p>
-              <button onClick={this.playPause}>
-                Play | Pause
+              <button onClick={this.playPause}><img className={style.bowser} src={shell} alt="Bowser Shell"/>
               </button>
             </div>
                 <NavLink to={'/'}>Home</NavLink>

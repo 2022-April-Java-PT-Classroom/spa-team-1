@@ -71,7 +71,7 @@ const Homescreen = () => {
           </div>
           <div className={style.artText}>
             <h2>Rewards</h2>
-            <p>Check out what you've earned!</p>
+            <p className="end">Check out what you've earned!</p>
 
           </div>
         </section>
