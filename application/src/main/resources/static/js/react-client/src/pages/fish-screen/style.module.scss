@@ -1,5 +1,5 @@
 .light {
-    background-image: url(../../assets/background/light-mode-background.png) !important;
+    background-image: url(../../assets/background/pages-light-background.png) !important;
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -8,8 +8,38 @@
    }
 
 .dark {
-    background-image: url(../../assets/background/dark-mode-background.png) !important;
+    background-image: url(../../assets/background/pages-dark-background.png) !important;
     color: white;
     background-size: cover;
-    min-height: 100vh;
    }
+
+   .fishStyleInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    & img{
+        height: auto;
+        width: 300px;
+        padding: 10px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    & h2{
+        display: block;
+        text-align: center;
+    }
+}
+
+.fishStyle {
+    background-color: #33cc33;
+    opacity: 0.9;
+    font-weight: bold;
+    // color: black;
+}
+
+.fishText {
+    font-weight: bold;
+    // color: black;
+}
