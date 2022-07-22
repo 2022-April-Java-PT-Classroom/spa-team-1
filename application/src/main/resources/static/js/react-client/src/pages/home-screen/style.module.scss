@@ -2,6 +2,7 @@
    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
    font-family: 'Press Start 2P', cursive;
    cursor: url('../../assets/homepagepics/mario.gif'),auto;
+   line-height: 1.5;
 }
 
 h1 {
@@ -53,3 +54,32 @@ h1 {
    right: 25px;
 }
 
+.marioimg h1 {
+   animation: fly 10s linear infinite;
+   top: 0;
+   left: 0;
+   position: fixed;
+   z-index: 999;
+   pointer-events: none;
+   padding: 2px;
+   width: 200px;
+   height: 200px;
+   background-image: url(../../assets/homepagepics/mario.png);
+}
+
+@keyframes fly{
+  0%
+  { transform: translate(40, -110vw);
+    }
+    50%
+    {
+      transform: translate(100vw,50vh);
+    }
+100%
+    { transform: translate(0, 50vh) rotateZ(180deg);
+
+    }
+
+
+
+}

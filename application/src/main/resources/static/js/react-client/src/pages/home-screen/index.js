@@ -28,6 +28,10 @@ const Homescreen = () => {
         <h1>Welcome to the Mystery Learning Site</h1>
         </div>
 
+        <div className={style.marioimg}>
+          <h1 className={style.marioh}></h1>
+        </div>
+
         <section className={style.artsection}>
         <div className={style.artText}>
             <h2>Art Museum</h2>

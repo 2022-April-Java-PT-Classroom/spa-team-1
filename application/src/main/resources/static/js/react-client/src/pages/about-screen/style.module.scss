@@ -44,6 +44,10 @@
     font-size: 40px;
     backface-visibility: hidden;
   }
+
+  .group1 {
+    margin-left: 200px;
+  }
   
   .back {
     transform: rotateY(180deg);
@@ -68,4 +72,3 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
- 
