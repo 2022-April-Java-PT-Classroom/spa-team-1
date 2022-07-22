@@ -15,40 +15,37 @@ const ArtgalleryScreen = () => {
     };
      // light/dark mode
 
-    
     const [art, setArt] = useState(null);
-    const [artTwo, setArtTwo] = useState(null);
     const [loading, setLoading] = useState(true);
+    
+    const randomID = Math.floor((Math.random() * 500) +1);
+
     useEffect(() => {
-        const fetchArtData = async () => {
-            const result = await Axios(`https://collectionapi.metmuseum.org/public/collection/v1/objects/437`);
-            console.log(result.data);
-            setArt(result.data);
+
+        const fetchArtData = async() => {
+            const randomArt = await Axios(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${randomID}`);
+            console.log(randomArt.data);
+            setArt(randomArt.data);
         };
-        if(art) {
+
+        if (art) {
             setLoading(false);
+        
         }
         const timer = setTimeout(() => {
             !art && fetchArtData();
-        }, 500);
+        }, 1000);
         return () => clearTimeout(timer);
-        }, [art]);
-        useEffect(() => {
-            const fetchArtTwoData = async () => {
-                const result = await Axios(`https://collectionapi.metmuseum.org/public/collection/v1/objects/432`);
-                console.log(result.data);
-                setArtTwo(result.data);
-            };
-            if(artTwo) {
-                setLoading(false);
-            }
-            const timer = setTimeout(() => {
-                !artTwo && fetchArtTwoData();
-            }, 500);
-            return () => clearTimeout(timer);
-            }, [artTwo]);
-    return (
+    }, [art]);
 
+    function newArt () {
+        window.location.reload(false);
+    }
+            
+       
+
+    return (
+        loading ? <h3>Creating art...</h3> :
          // light/dark mode
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="Artgallery" id={theme} >   
@@ -58,25 +55,29 @@ const ArtgalleryScreen = () => {
         <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
         </div>
     {/* light/dark mode */}
-
-        
-        loading ? <h3>Creating art...</h3> :
-        <div className={style.artContainer}>
+         <div>
+            <section className ={style.artContainer}>
             <h1>The Metropolitan Museum of Art</h1>
-          <h2>{art.title}</h2>
-          <h5>{art.accessionYear}</h5>
-          <h3>{art.artistDisplayName}</h3>
-          <img src={art.primaryImage} />
-          <h2>{artTwo.title}</h2>
-          <h5>{artTwo.accessionYear}</h5>
-          <h3>{artTwo.artistDisplayName}</h3>
-          <img src={artTwo.primaryImage} />
-        </div>
-        
+            <section className={style.artInfo}>
+            <h3>{art.title}</h3>
+          <h4>{art.artistDisplayName}</h4>
+          <img src={art.primaryImage}/>   
+          <h5>{art.period}</h5>
+          <h5>Date(s): {art.objectDate}</h5>
+          <p>Created in: {art.city}, {art.state}</p>
+          <p>{art.country}</p>
+          <p>{art.rightsAndReproduction}</p>
+          </section>
         {/* light/dark mode */}
+        </section>
+        <button onClick={newArt}>See More!</button>
         </div>
         </div>
-        </ThemeContext.Provider>
+        </div>
+         </ThemeContext.Provider>
     );
-};
+
+
+}
+
 export default ArtgalleryScreen;

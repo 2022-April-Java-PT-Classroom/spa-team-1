@@ -47,7 +47,7 @@ const Homescreen = () => {
             <p>Learn more about fish wildlife</p>
           </div>
           <div className={style.fishimg}>
-          <a href="/fish"><img className={style.mysterybox} src={box} alt="mystery box" />
+          <a href="/fishes"><img className={style.mysterybox} src={box} alt="mystery box" />
           </a>
           </div>
         </section>

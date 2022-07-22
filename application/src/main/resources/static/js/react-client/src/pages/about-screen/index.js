@@ -60,7 +60,7 @@ const [ theme, setTheme ] = useState("dark");
                         <div className="Card" id='5'style={styles.card}>
                               <h5 className="aboutH2">Adrian</h5>
                               <img className='pics' src={adrianIcon} alt="Adrian Pic" />
-                              <p>lorem Ipsum</p>
+                              <p>Hello! I am an entry-level developer located in the greater Cleveland area. I enjoy rollerskating, cats & coffee.</p>
                         </div>
                         <div className="Card" id='6'style={styles.card}>
                               <h5 className="aboutH2">Jalyn</h5>
