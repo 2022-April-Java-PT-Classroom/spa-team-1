@@ -1,10 +1,17 @@
 import React, { createContext, useState } from "react";
 
+import {FaStar} from 'react-icons/fa';
+import JacLogoL from '../../assets/logo/JAC-Game-light.png';
 import ReactSwitch from "react-switch";
-import alanIcon from '../../assets/contact/alan.png';
-import cliffIcon from '../../assets/contact/cliff.png';
-import jordanIcon from '../../assets/contact/jordan.png';
+import alanIcon from '../../assets/contact/alan1.png';
+import cliffIcon from '../../assets/contact/cliff1.png';
+import jordanIcon from '../../assets/contact/jordan1.png';
 import style from './style.module.scss';
+
+const colors ={
+ orange:'#FFBA5A',
+ grey: '#a9a9a9'
+}
 
 export const ThemeContext = createContext(null);
 
@@ -14,9 +21,32 @@ const ContactScreen = () => {
     const toggleTheme = () => {
       setTheme((curr) => (curr === "light" ? "dark" : "light"));
     };
-    
-    return (
 
+    var stars= Array(5).fill(0);
+
+
+
+   const[currentValue, setCurrentValue]= React.useState(0);
+   const[hoverValue, setHoverValue] = React.useState(undefined); 
+   
+   const handleClick = value=> {
+    setCurrentValue(value)
+   };
+   const handleMouseOver=value=>{
+    setHoverValue(value)
+}
+   const handleMouseLeave=()=>{
+    setHoverValue(undefined)
+   }
+
+
+
+
+
+
+        return(
+
+            
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <div className="Contact" id={theme} >   
         <div className={theme=== 'dark' ? style.dark : style.light}>
