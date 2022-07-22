@@ -27,7 +27,7 @@ const [ theme, setTheme ] = useState("dark");
       <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
       </div>
       
-            <div class='container' style={styles.cont}>
+            <div className='container' style={styles.cont}>
                   <h1 className="aboutHF"style={styles.aboutHF}> Meet the Team</h1><br></br>
                   <div style={styles.group1}>
                   <div className="Card" id= '1'style={styles.card}>
@@ -81,10 +81,7 @@ const [ theme, setTheme ] = useState("dark");
 };
 const styles={
 
-      container:{
-            display: 'flex',
-            justifyContent: 'center',
-      },
+
       
       cont:{
             width:'600',
