@@ -72,7 +72,7 @@ const RewardScreen = () => {
                     <p className="reward_price">Price: {rewards.price}</p>
                     <img className="rewards_image" src={rewards.urlImg}></img>
                     <p className="rarity">Rarity: {rewards.stars} </p>
-                    <p className="rewards_info">Summary: {rewards.description} </p>
+                    <p className="rewards_info">{rewards.description} </p>
                     </div>
             ))}
         </div>
