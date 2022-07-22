@@ -13,54 +13,59 @@
  font-size: 75px;
  color: white;
  margin-top: 100px;
- }
-
- .aboutScreen{
-   display: flex;
-   justify-content: center;
-   justify-items: center;
- }
- .card1{
-   background-repeat: none;
-   grid-column: 1;
   }
- .card2{
-   background-repeat: none;
-   grid-column: 2;
- }
- .card3{
-   background-repeat: none;
-     grid-column: 3;
-   }
- .card4{
-   background-repeat: none;
-     grid-column: 1;
-     grid-row: 2;
-   }
- .card5 {
-   background-repeat: none;
-     grid-column: 2;
-     grid-row: 2;
-   }
- .card6  {
-   background-repeat: none;
-     grid-column: 3;
-     grid-row: 2;
-   }
- .devInfo{
-   color:white;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
+  .card-grid{
+    perspective: 600px;
+  }
+  
+  
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+  }
+  
+  .card.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+  
+  .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 260px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    backface-visibility: hidden;
+  }
+  
+  .back {
+    transform: rotateY(180deg);
+  }
+
 
 .light {
   background-image: url(../../assets/background/pages-light-background.png) !important;
   background-size: cover;
+  color: white;
+  min-height: 100vh;
  }
 
  .dark {
   background-image: url(../../assets/background/pages-dark-background.png) !important;
   color: white;
   background-size: cover;
- }
+  min-height: 100vh;
+  }
+
+ @keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+ 
