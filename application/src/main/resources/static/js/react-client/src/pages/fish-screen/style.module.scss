@@ -1,16 +1,16 @@
 .light {
-    background-image: url(../../assets/background/pages-light-background.png) !important;
-    height: 100%;
-    background-position: center;
+    background-image: url(../../assets/background/ocean-light.png) !important;
     background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
+    background-size: 100%;
+    height: 2800px;
    }
 
 .dark {
-    background-image: url(../../assets/background/pages-dark-background.png) !important;
+    background-image: url(../../assets/background/ocean-dark.png) !important;
     color: white;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 2800px;
    }
 
    .fishStyleInfo {

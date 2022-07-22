@@ -1,13 +1,40 @@
 .light {
-    background-image: url(../../assets/background/light-mode-background.png) !important;
-    height: 100%;
-    background-position: center;
+    background-image: url(../../assets/background/ocean-light.png) !important;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    height: 2800px;
    }
 
 .dark {
-    background-image: url(../../assets/background/dark-mode-background.png) !important;
+    background-image: url(../../assets/background/ocean-dark.png) !important;
     color: white;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 2800px;
    }
+
+   .fishsectionone {
+    position: absolute;
+    bottom: -235px;
+    right: 560px;
+ 
+ }
+ 
+ .fishsectiontwo {
+    position: absolute;
+    bottom: -235px;
+    right: 385px;
+ 
+ }
+ 
+ .fishsectionthree{
+    position: absolute;
+    bottom: -235px;
+    right: 220px;
+ }
+ 
+ .fishsectionfour {
+    position: absolute;
+    bottom: -235px;
+    right: 50px;
+ }

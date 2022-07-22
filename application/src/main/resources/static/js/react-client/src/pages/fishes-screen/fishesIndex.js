@@ -22,45 +22,54 @@ const FishesPage =()=> {
 
             <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
             </div>
+
+            <h1>Welcome to the Mystery Learning Site</h1>
+            <br></br>
+            <h3>Pick a mystery box to see our fish!</h3>
       
-<div className={style.fishsection}>
+<div className={style.fishsectionone}>
+<div className={style.fishText}>
+  <h2>Fish 1</h2>
+  </div>
 <div className={style.fishimg}>
 <a href="/fish"><img className={style.mysterybox} src={box} alt="mystery box" />
 </a>
 </div>
-<div className={style.fishText}>
-  <h2>Fish maybe?</h2>
-  </div>
+
   </div>
 
-  <div className={style.fishsection}>
+  <div className={style.fishsectiontwo}>
+  <div className={style.fishText}>
+  <h2>Fish 2</h2>
+  </div>
 <div className={style.fishimg}>
 <a href="/fish"><img className={style.mysterybox} src={box} alt="mystery box" />
 </a>
 </div>
-<div className={style.fishText}>
-  <h2>Seafood</h2>
-  </div>
+
   </div>
 
-  <div className={style.fishsection}>
+  <div className={style.fishsectionthree}>
+  
+  <div className={style.fishText}>
+  <h2>Fish 3</h2>
+  </div>
 <div className={style.fishimg}>
 <a href="/fish"><img className={style.mysterybox} src={box} alt="mystery box" />
 </a>
 </div>
-<div className={style.fishText}>
-  <h2>Fish?</h2>
-  </div>
+
   </div>
 
-  <div className={style.fishsection}>
+  <div className={style.fishsectionfour}>
+  <div className={style.fishText}>
+  <h2>Fish 4</h2>
+  </div>
 <div className={style.fishimg}>
 <a href="/fish"><img className={style.mysterybox} src={box} alt="mystery box" />
 </a>
 </div>
-<div className={style.fishText}>
-  <h2>Fish</h2>
-  </div>
+
   </div>
 
   </div>
