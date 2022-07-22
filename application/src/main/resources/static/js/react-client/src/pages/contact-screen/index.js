@@ -37,8 +37,17 @@ const ContactScreen = () => {
    const handleMouseLeave=()=>{
     setHoverValue(undefined)
    }
+   const[review, setReview] = useState('')
+   const handleReviewChange=(e)=>{
+    setReview((e).target.value)
+   };
 
 
+const handleSubmit= (e)=>{
+  (e).preventDefault();
+  alert('Thank You');
+  
+}
 
 
 
@@ -96,14 +105,40 @@ const ContactScreen = () => {
                     )
                 })}
                 </div>
-                <textarea
-                placeholder='What do you think?'
-                style={styles.textarea} alt='textarea'
-                />
-            </div>
-          </div>
-          </div>
-    </div>   
+                <div ClassName='Review' >
+               <form onSubmit={handleSubmit}>
+                <div>
+                
+                  <input
+                   type="review"
+                   name="review"
+                    placeholder="What do you think?"
+                    onChange={handleReviewChange}
+                    value={review}
+                    />
+                 </div>
+                  <button type="submit">                         Submit
+                          </button>
+                </form>
+               
+               
+               
+               
+               
+               
+                {/* <input type="text" placeholder="what do you think" id="review" />
+      <input type="button"value="submit" onclick="send()" />
+      let review = document.querySelector("#review");
+      function send() {
+        console.log(review.value)} */}
+                
+            
+     </div>
+     </div>
+     </div>
+     </div>
+     </div>
+     
     </ThemeContext.Provider>   
         )
     
