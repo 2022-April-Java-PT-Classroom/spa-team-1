@@ -72,7 +72,7 @@ const Homescreen = () => {
             <p className="end">Check out what you've earned!</p>
           </div>
           <div className={style.rewardimg}>
-          <a href="/reward"><img className={style.mysterybox} src={box} alt="mystery box" />
+          <a href="/api/rewards"><img className={style.mysterybox} src={box} alt="mystery box" />
           </a>
           </div>
         </section>

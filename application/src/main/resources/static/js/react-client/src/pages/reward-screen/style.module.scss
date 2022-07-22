@@ -6,8 +6,39 @@
   
 .dark {
     background-image: url(../../assets/background/pages-dark-background.png) !important;
-    color: white;
+    color: black;
     background-size: cover;
     min-height: 100vh;
+}
+.rewardsText div h1{
+    font-size: 35px;
+    background: linear-gradient(to right, blue, red , green, orange, purple, yellow);
+    -webkit-background-clip: text;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-clip: text;
+    color: transparent;
+    // position: absolute;
+    animation: rainbow_animation 1s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+@keyframes rainbow_animation {
+    100% {
+        background-position: 0 0;
+    }
 
-   }
+    50% {
+        background-position: 100% 0;
+    }
+}
+.rewardsText p{
+    font-size: 20px;
+}
+.rewardsText div{
+    background-color: rgb(248, 245, 245);
+    margin: 2rem 60rem;
+    border: double 0.3em transparent;
+    border-radius: 10px;
+
+}

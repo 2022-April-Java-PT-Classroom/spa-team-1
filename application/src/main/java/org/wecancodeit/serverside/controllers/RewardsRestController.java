@@ -23,9 +23,9 @@ public class RewardsRestController {
         return (Collection<Rewards>) rewardsRepo.findAll();
     }
 
-//    @GetMapping("/api/reward/{id}")
-//    public Optional<Rewards> getRewards(@PathVariable Long id) {return rewardsRepo.findById(id);
-//    }
+    @GetMapping("/api/reward/{id}")
+    public Optional<Rewards> getRewards(@PathVariable Long id) {return rewardsRepo.findById(id);
+    }
     //should I make it so people can sell their cards to increase their currency....?
     @PostMapping("/api/rewards/add-rewards")
     public Collection<Rewards> addRewards(@RequestBody String body) throws JSONException {

@@ -11,7 +11,7 @@ class Rewards {
         return axios.post(URL_END_POINT, rewards);
     }
     getRewardById(rewardsId){
-        return axios.get(URL_END_POINT + '/' + rewards);
+        return axios.get(URL_END_POINT + '/' + rewardsId);
     }
     updateReward(rewardsId, rewards) {
         axios.put(URL_END_POINT + '/' + rewardsId, rewards);

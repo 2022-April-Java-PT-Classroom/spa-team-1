@@ -20,7 +20,8 @@ const AppRouter = () => {
             <Route exact path={'/fish'} component={FishScreen} />
             <Route exact path={'/fishes'} component={FishesPage}/>
             <Route exact path={'/math'} component={MathScreen} />
-            <Route exact path={'/rewards'} component={RewardScreen} />
+            <Route exact path={'/api/rewards'} component={RewardScreen} />
+
         </Switch>
     );
 }

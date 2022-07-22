@@ -16,7 +16,7 @@ public class Rewards {
     public String urlImg;
     public int stars;
 //    @OneToMany(mappedBy = "stars")
-    @JsonIgnore
+//    @JsonIgnore
     public String description;
 
     public Rewards(){
@@ -29,6 +29,7 @@ public class Rewards {
         this.price = price;
         this.urlImg = urlImg;
         this.stars = stars;
+        this.isSelected = isSelected;
         this.description = description;
     }
 
