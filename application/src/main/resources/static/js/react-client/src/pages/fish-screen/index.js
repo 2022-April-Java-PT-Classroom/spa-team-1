@@ -49,12 +49,13 @@ return (
             <ReactSwitch onChange={toggleTheme} checked={theme === "dark"}/>
             </div>
     
-    <div>
+    <div className={style.fishStyleInfo}>
         <h3>{fishes['Species Name']}</h3>
         <h3>{fishes['Scientific Name']}</h3>
         <img src={fishes['Species Illustration Photo'].src}></img>
+        <div className={style.fishStyle}>
         <h4>{fishes['Quote']}</h4>
-        <div>
+        <div className={style.fishText}>
             <ul>NOAA Fisheries Region : {fishes['NOAA Fisheries Region']}</ul>
             <ul>Population : {fishes['Population']}</ul>
             <ul>Calories : {fishes['Calories']}</ul>
@@ -63,6 +64,7 @@ return (
             <ul>FatTotal : {fishes['Fat, Total']}</ul>
             <ul>Fiber, Total Dietary : {fishes['Fiber, Total Dietary']}</ul>
             <ul>Sodium : {fishes['Sodium']}</ul>
+            </div>
             </div>
 
             
