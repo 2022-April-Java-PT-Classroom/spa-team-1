@@ -58,12 +58,15 @@ const ArtgalleryScreen = () => {
          <div>
             <section className ={style.artContainer}>
             <h1>The Metropolitan Museum of Art</h1>
+            <section className={style.artInfo}>
             <h3>{art.title}</h3>
           <h4>{art.artistDisplayName}</h4>
           <img src={art.primaryImage}/>   
           <h5>{art.period}</h5>
-          <h5>{art.objectDate}</h5>
-        
+          <h5>Date(s): {art.objectDate}</h5>
+          <p>Created in: {art.city}, {art.state}</p>
+          <p>{art.country}</p>
+          </section>
         {/* light/dark mode */}
         </section>
         <button onClick={newArt}>See More!</button>
