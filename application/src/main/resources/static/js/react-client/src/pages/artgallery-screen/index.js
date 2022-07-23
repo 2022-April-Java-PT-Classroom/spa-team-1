@@ -18,7 +18,7 @@ const ArtgalleryScreen = () => {
     const [art, setArt] = useState(null);
     const [loading, setLoading] = useState(true);
     
-    const randomID = Math.floor((Math.random() * 500) +1);
+    const randomID = Math.floor((Math.random() * 4500) +1);
 
     useEffect(() => {
 
@@ -56,8 +56,14 @@ const ArtgalleryScreen = () => {
         </div>
     {/* light/dark mode */}
          <div>
+         <h1>The Metropolitan Museum of Art</h1>
             <section className ={style.artContainer}>
-            <h1>The Metropolitan Museum of Art</h1>
+            <section className={style.met}>
+                <h2>About the MET</h2>
+                <p>The Metropolitan Museum of Art was founded in 1870. The museum is located in New York, New York in two different locations.
+                     You can also discover all the rare & beautiful art online! Experience over 5,000 years of art from all around the world right here! 
+                     Click the button below to dive into some of our Earth's beautiful, historic artifacts.</p>
+            </section>
             <section className={style.artInfo}>
             <h3>{art.title}</h3>
           <h4>{art.artistDisplayName}</h4>
