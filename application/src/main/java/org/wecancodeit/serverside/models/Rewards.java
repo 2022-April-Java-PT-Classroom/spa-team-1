@@ -36,7 +36,7 @@ public class Rewards {
     public Long getId() {
         return id;
     }
-    public boolean setSelected(boolean rewardIsSelected){
+    public boolean setSelected(boolean isSelected){
         return isSelected;
     }
     public String getName(){
