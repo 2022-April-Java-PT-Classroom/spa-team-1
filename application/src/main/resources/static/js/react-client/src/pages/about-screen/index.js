@@ -29,16 +29,20 @@ const [ theme, setTheme ] = useState("dark");
             <div class='container' style={styles.cont}>
                   <h1 className="aboutHF"style={styles.aboutHF}> Meet the Team</h1><br></br>
                   <div style={styles.group1}>
+                             <div style={styles.spacer1}>
+                              
+                             </div>
                   <div className="Card" id= '1'style={styles.card}>
                         <h5 className="aboutH2">Stephanie</h5>
                         <img className='pics' src={stephIcon} alt="Stephanie Pic" />  
-                             <p>lorem Ipsum</p>
+                             <p>My german cat Oliver thinks I'm the best dog mom in the world. As long as I listen to his every meow.</p>
                   </div>
+                  
             
                         <div className="Card " id= '2'style={styles.card}>
                               <h5 className="aboutH2">Gian</h5>
                               <img className='pics' src={gianIcon} alt="Gian Pic" />
-                              <p>Past life HR professional, current life software developer. You can catch me gaming on pc or console most days, or outside smoking a nice cigar.</p>
+                              <p>Past life HR pro, current life software developer. You can catch me gaming on pc or console most days, or outside smoking a nice cigar.</p>
                         </div>
                         <div className="Card" id='3'style={styles.card}>
                               <h5 className="aboutH2">Gail</h5>
@@ -60,14 +64,12 @@ const [ theme, setTheme ] = useState("dark");
                         <div className="Card" id='5'style={styles.card}>
                               <h5 className="aboutH2">Adrian</h5>
                               <img className='pics' src={adrianIcon} alt="Adrian Pic" />
-                              <p>Hello! I am an entry-level developer located in the greater Cleveland area. I enjoy rollerskating, cats & coffee.</p>
+                              <p>Hello! I am an entry-level developer located in the greater Cleveland area. I enjoy skating, cats & coffee.</p>
                         </div>
                         <div className="Card" id='6'style={styles.card}>
                               <h5 className="aboutH2">Jalyn</h5>
                               <img className='pics' src={jalynIcon} alt="Jalyn Pic" />
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                    sed do eiusmod tempor incididunt ut labore et dolore 
-                                    magna aliqua. </p>
+                              <p>I like magic tricks and reading low quality graphic novels. My favorite is Catman.</p>
                         
                         </div>
                         </div>
@@ -92,14 +94,18 @@ const styles={
       group1:{ 
            columnGap:'162px',
             display: 'flex',
+            
             // justifyContent:'space-around',
-      }, 
+      },
+      spacer1:{
+           width:'350px',
+           }, 
       group2:{
             columnGap:'161px',
             display: 'flex',
       }, 
       spacer:{
-       width:'0px'
+       width:'512px'
       },
       card:{
             backgroundColor:'black',
