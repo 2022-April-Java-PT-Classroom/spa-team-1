@@ -1,10 +1,10 @@
 import JacLogoL from '../../assets/logo/JAC-Game-light.png';
 import React, { createContext, useState } from "react";
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 import ReactSwitch from "react-switch";
 import alanIcon from '../../assets/contact/alan1.png';
 import cliffIcon from '../../assets/contact/cliff1.png';
 import jordanIcon from '../../assets/contact/jordan1.png';
-
 import style from './style.module.scss';
 import {FaStar} from 'react-icons/fa';
 const colors ={
@@ -21,10 +21,11 @@ const ContactScreen = () => {
       setTheme((curr) => (curr === "light" ? "dark" : "light"));
     };
 
+
+
+
+
     var stars= Array(5).fill(0);
-
-
-
    const[currentValue, setCurrentValue]= React.useState(0);
    const[hoverValue, setHoverValue] = React.useState(undefined); 
    
@@ -37,6 +38,11 @@ const ContactScreen = () => {
    const handleMouseLeave=()=>{
     setHoverValue(undefined)
    }
+
+
+
+
+
    const[review, setReview] = useState('')
    const handleReviewChange=(e)=>{
     setReview((e).target.value)
@@ -45,8 +51,11 @@ const ContactScreen = () => {
 
 const handleSubmit= (e)=>{
   (e).preventDefault();
-  alert('Thank You');
+  ;
+}
+const updateContent = (e) =>{
   
+
 }
 
 
@@ -67,26 +76,41 @@ const handleSubmit= (e)=>{
                          <h2>JAC Enterprises</h2>
                         <div className= 'founders'style= {styles.founders} alt='founders'>
                             <div style={styles.card} alt='cliff'>
-                                <img src={cliffIcon} alt='Cliff Jenkins CEO'/><br></br>
-                                <a>Cliff Jenkins<br></br> CEO</a>
+                              <Router>
+                              
+                                  <a href='https://github.com/cljenkinsjr/jackr-enterprises-site' target="_blank" rel="noreferrer">
+                                  <img src={cliffIcon} alt='Cliff Jenkins CEO'/><br></br>
+                                  </a>
+                                   
+                                   </Router>    
+                                       <a>Cliff Jenkins<br></br> CEO</a>
                                 </div>
-                                <div style={styles.card} alt='alan'>                                
+                                <div style={styles.card} alt='alan'> 
+                                <Router>
+                                <a href='https://github.com/AlanKostrick' target='_blank' rel="noreferrer">
                                 <img src={alanIcon} alt='Alan Kostrick VP'/><br></br>
+                                </a>
+                                </Router>
                                 <a>Alan Kostrick<br></br> Vice President</a>
                             </div>
-                            <div style={styles.card} alt='jordan'>                                
+                            <div style={styles.card} alt='jordan'> 
+                                <Router>                            
+                            <a href='https://github.com/orgs/2022-April-Java-PT-Classroom/people/jordanCCIT' target='_blank' rel="noreferrer">
                             <img src={jordanIcon} alt='Jordan Gilpin Retired' /><br></br>
+                                </a>
+                                </Router>
                                 <a>Jordan Gilpin <br></br>You are Missed</a>
                             </div>
                         </div>
-                            {/* <h2>Contact Us</h2> */}
-                            {/* <article>
-                
-                                <a href='https://github.com/cljenkinsjr/jackr-enterprises-site'></a>
-                            </article> */}
                         <br></br><br></br>
             <h1 style={styles.reviews}>Reviews</h1>
             <div className='Rwrapper' style={styles.Rwrapper} alt='Rwrapper'>
+              <div className='kreviews>' style={styles.kreviews} alt='kreviews'>
+              <div class="andrew">Andrew<br></br> "I loved the flying Mario"</div><br></br>
+    <div class="ryker"> Ryker<br></br> "The fish are Cool"</div><br></br>
+    <div class="felicia">Felicia<br></br>"I think it's fun"</div>
+              </div><br></br><br></br>
+
             <div className='stars'style={styles.stars} alt='stars'>
                 {stars.map((_, index)=>{
                     return(
@@ -117,22 +141,9 @@ const handleSubmit= (e)=>{
                     value={review}
                     />
                  </div>
-                  <button type="submit">                         Submit
-                          </button>
+                  <button type="submit">Submit</button>
                 </form>
-               
-               
-               
-               
-               
-               
-                {/* <input type="text" placeholder="what do you think" id="review" />
-      <input type="button"value="submit" onclick="send()" />
-      let review = document.querySelector("#review");
-      function send() {
-        console.log(review.value)} */}
-                
-            
+                  
      </div>
      </div>
      </div>
@@ -159,7 +170,10 @@ const styles={
         gap: '20px',
         flex:'1'
       },
-      reviews:{
+      kreviews:{
+        display:'flex',
+        flexDirection:'column',
+        flexWrap:'wrap',
       },
 
       card:{
